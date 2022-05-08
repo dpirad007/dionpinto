@@ -19,7 +19,7 @@
 		</h1>
 
 		<div id="title_subsection" class="nes-container is-dark">
-			<p><i class="nes-octocat animate" /> Web Dev mostly, Systems languages sometimes.</p>
+			<p><i class="nes-octocat animate" /> Web Dev + Systems languages.</p>
 		</div>
 	</main>
 

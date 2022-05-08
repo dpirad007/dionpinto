@@ -7,7 +7,7 @@
 			<a href="/" class="nes-badge">
 				<span class="is-primary">Home</span>
 			</a>
-			<a href="#" class="nes-badge">
+			<a href="projects" class="nes-badge">
 				<span class="is-dark">Projects</span>
 			</a>
 
