@@ -1,64 +1,59 @@
 <script>
+	import { SvelteToast } from '@zerodevx/svelte-toast';
+
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
+	import Project from '../components/Project.svelte';
+
+	const data = [
+		{
+			projectName: 'Entropy',
+			projectDescription: 'fast, Dataframes and Series powered by WebAssembly and Rust.',
+			imageSrc: 'entropy.png',
+			gitLink: 'https://github.com/dpirad007/Entropy',
+			typeBadge: 'Entropy'
+		},
+		{
+			projectName: 'Plot',
+			projectDescription: 'Plotting powered by WebAssembly and Rust.',
+			imageSrc: 'plot.png',
+			gitLink: 'https://github.com/dpirad007/Plot',
+			typeBadge: 'Plot'
+		},
+		{
+			projectName: 'Meditatree',
+			projectDescription: 'A 3D interactive mindful meditation web app.',
+			imageSrc: 'meditatree.png',
+			gitLink: 'https://github.com/dpirad007/meditatree',
+			typeBadge: 'None'
+		},
+		{
+			projectName: 'Botonomics',
+			projectDescription: 'Build interactive Chatbots.',
+			imageSrc: 'botonomics.png',
+			gitLink:
+				'https://teedee.io/?utm_source=botonomics_site&utm_medium=website&utm_campaign=analytics',
+			typeBadge: 'Internship'
+		},
+		{
+			projectName: 'Balanced',
+			projectDescription: 'Manage your Mental Wellbeing.',
+			imageSrc: 'balanced.png',
+			gitLink: 'https://qtech-mhs-dev.web.app/',
+			typeBadge: 'Internship'
+		}
+	];
 </script>
 
+<SvelteToast />
 <main class="main">
 	<header><Navbar /></header>
 
 	<main class="container">
 		<div class="project-grid">
-			<div class="nes-container is-dark with-title">
-				<p class="title">
-					Entropy <span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-error">Final Year</span>
-					</span>
-				</p>
-				<img
-					class="nes-avatar"
-					alt="Gravatar"
-					src="https://www.gravatar.com/avatar?s=15"
-					style="image-rendering: pixelated;"
-				/>
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
-			<div class="nes-container is-dark with-title">
-				<p class="title">
-					Plot <span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-error">Final Year</span>
-					</span>
-				</p>
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
-			<div class="nes-container is-dark with-title">
-				<p class="title">Meditatree</p>
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
-			<div class="nes-container is-dark with-title">
-				<p class="title">
-					Botonomics <span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-warning">Internship</span>
-					</span>
-				</p>
-
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
-			<div class="nes-container is-dark with-title">
-				<p class="title">
-					Balanced <span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-warning">Internship</span>
-					</span>
-				</p>
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
-			<div class="nes-container is-dark with-title">
-				<p class="title">ETAMAX-21</p>
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
-			<div class="nes-container is-dark with-title">
-				<p class="title">Covid-19-Tracker</p>
-				<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-			</div>
+			{#each data as project}
+				<Project {...project} />
+			{/each}
 		</div>
 	</main>
 
@@ -71,16 +66,14 @@
 	.project-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	.project-grid div {
-		margin: 1rem;
+		column-gap: 1rem;
+		row-gap: 1rem;
+		margin: 1rem 0;
 	}
 
 	.main {
 		width: 100vw;
 		height: 100vh;
-		background-color: black;
 		padding: 1rem;
 		display: grid;
 		grid-template-areas:

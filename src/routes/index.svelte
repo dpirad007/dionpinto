@@ -32,7 +32,6 @@
 	.main {
 		width: 100vw;
 		height: 100vh;
-		background-color: black;
 		padding: 1rem;
 		display: grid;
 		grid-template-areas:
@@ -48,6 +47,7 @@
 	.container {
 		align-self: center;
 		grid-area: main;
+		margin-bottom: 200px;
 	}
 
 	footer {
