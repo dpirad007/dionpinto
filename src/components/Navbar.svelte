@@ -2,7 +2,7 @@
 </script>
 
 <main>
-	<nav>
+	<nav id="navbar">
 		<div id="container">
 			<a href="/" class="nes-badge">
 				<span class="is-primary">Home</span>
@@ -11,11 +11,11 @@
 				<span class="is-dark">Projects</span>
 			</a>
 
-			<a href="#" class="nes-badge">
+			<a href="blog" class="nes-badge">
 				<span class="is-dark">Blog</span>
 			</a>
 
-			<!-- <input type="text" id="search_field" class="nes-input" placeholder="Search" /> -->
+			<input type="text" id="search_field" class="nes-input" placeholder="Search" />
 		</div>
 	</nav>
 </main>

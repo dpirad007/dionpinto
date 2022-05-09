@@ -72,15 +72,13 @@
 	}
 
 	.main {
-		width: 100vw;
-		height: 100vh;
 		padding: 1rem;
 		display: grid;
 		grid-template-areas:
 			'head'
 			'main'
 			'foot';
-		grid-template-rows: 0.1fr 1fr 0.1fr;
+		grid-template-rows: 0.1fr 0.8fr 0.1fr;
 	}
 	header {
 		grid-area: head;

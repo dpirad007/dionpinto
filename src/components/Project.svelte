@@ -23,7 +23,7 @@
 </script>
 
 <main>
-	<div class="nes-container is-dark with-title">
+	<div id="project" class="nes-container is-dark with-title">
 		{#if typeBadge === 'Entropy'}
 			<p class="title">
 				{projectName}
@@ -64,11 +64,38 @@
 		<div id="project_border" />
 		<p>{projectDescription}</p>
 
-		<a href={gitLink} target="_blank"><i class="nes-icon github" /></a>
+		<div id="project_footer">
+			<a href={gitLink} target="_blank"><i class="nes-icon github" /></a>
+			<!-- <button type="button" class="nes-btn is-primary">Read More</button> -->
+			<section>
+				<button
+					type="button"
+					class="nes-btn is-primary"
+					on:click={() => document.getElementById('dialog-dark-rounded').showModal()}
+				>
+					Read More
+				</button>
+				<dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+					<form method="dialog">
+						<p class="title">Tech Stack</p>
+						<p>Alert: this is a dialog.</p>
+						<menu id="modal_btn" class="dialog-menu">
+							<button class="nes-btn is-primary">Okay</button>
+						</menu>
+					</form>
+				</dialog>
+			</section>
+		</div>
 	</div>
 </main>
 
 <style>
+	#modal_btn {
+		padding: 1rem 0 0 0;
+		display: flex;
+		justify-content: center;
+	}
+
 	#project_img {
 		width: 100%;
 	}
@@ -76,5 +103,11 @@
 	#project_border {
 		margin: 10px 0;
 		border: 2px solid white;
+	}
+
+	#project_footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 </style>

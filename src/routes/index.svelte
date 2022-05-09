@@ -38,7 +38,7 @@
 			'head'
 			'main'
 			'foot';
-		grid-template-rows: 0.1fr 1fr 0.1fr;
+		grid-template-rows: 0.1fr 0.8fr 0.1fr;
 	}
 	header {
 		grid-area: head;
