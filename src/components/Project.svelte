@@ -20,6 +20,9 @@
 	 * @type {string}
 	 */
 	let typeBadge;
+
+	// @ts-ignore
+	const showModal = () => document.getElementById('dialog-dark-rounded').showModal();
 </script>
 
 <main>
@@ -66,15 +69,8 @@
 
 		<div id="project_footer">
 			<a href={gitLink} target="_blank"><i class="nes-icon github" /></a>
-			<!-- <button type="button" class="nes-btn is-primary">Read More</button> -->
 			<section>
-				<button
-					type="button"
-					class="nes-btn is-primary"
-					on:click={() => document.getElementById('dialog-dark-rounded').showModal()}
-				>
-					Read More
-				</button>
+				<button type="button" class="nes-btn is-primary" on:click={showModal}> Read More </button>
 				<dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
 					<form method="dialog">
 						<p class="title">Tech Stack</p>

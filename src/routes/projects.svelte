@@ -8,7 +8,7 @@
 	const data = [
 		{
 			projectName: 'Entropy',
-			projectDescription: 'fast, Dataframes and Series powered by WebAssembly and Rust.',
+			projectDescription: 'Fast, Series and DataFrames powered by WebAssembly and Rust.',
 			imageSrc: 'entropy.png',
 			gitLink: 'https://github.com/dpirad007/Entropy',
 			typeBadge: 'Entropy'

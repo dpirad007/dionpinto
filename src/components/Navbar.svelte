@@ -14,8 +14,6 @@
 			<a href="blog" class="nes-badge">
 				<span class="is-dark">Blog</span>
 			</a>
-
-			<input type="text" id="search_field" class="nes-input" placeholder="Search" />
 		</div>
 	</nav>
 </main>
