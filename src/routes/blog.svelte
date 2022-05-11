@@ -31,6 +31,14 @@
 					</span>
 				</li>
 				<li>
+					<a class="article_link" href="#" on:click={comingSoonToast}
+						>Publish SvelteKit App on gh-pages</a
+					>
+					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+						<span class="is-error" style="color: white;">Coming Soon</span>
+					</span>
+				</li>
+				<li>
 					<a class="article_link" href="#" on:click={comingSoonToast}>Chip 8</a>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 						<span class="is-error" style="color: white;">Coming Soon</span>
