@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
 
 	import Navbar from '../components/Navbar.svelte';
@@ -22,7 +23,9 @@
 			</h4>
 			<ul class="nes-list is-circle">
 				<li>
-					<a class="article_link" href="entropy">Series and DataFrames with Rust and WebAssembly</a>
+					<a class="article_link" href="{base}/entropy"
+						>Series and DataFrames with Rust and WebAssembly</a
+					>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 						<span class="is-success" style="color: white;">9/5/22</span>
 					</span>

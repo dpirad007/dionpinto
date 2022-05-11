@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	export /**
 	 * @type {string}
 	 */
@@ -8,14 +9,14 @@
 <main>
 	<nav id="navbar">
 		<div id="container">
-			<a href="/" class="nes-badge">
+			<a href="{base}/" class="nes-badge">
 				{#if curPage === 'Home'}
 					<span class="is-primary">Home</span>
 				{:else}
 					<span class="is-dark">Home</span>
 				{/if}
 			</a>
-			<a href="projects" class="nes-badge">
+			<a href="{base}/projects" class="nes-badge">
 				{#if curPage === 'Projects'}
 					<span class="is-primary">Projects</span>
 				{:else}
@@ -23,7 +24,7 @@
 				{/if}
 			</a>
 
-			<a href="blog" class="nes-badge">
+			<a href="{base}/blog" class="nes-badge">
 				{#if curPage === 'Blog'}
 					<span class="is-primary">Blog</span>
 				{:else}
