@@ -16,7 +16,7 @@
 	<header><Navbar curPage="Blog" /></header>
 
 	<main class="container">
-		<Title type={5} title="Index" />
+		<Title type={2} title="Index" />
 		<ul id="blog_list" class="nes-list is-circle">
 			<h4>
 				<span style="color: #209cee;">#</span> Articles
