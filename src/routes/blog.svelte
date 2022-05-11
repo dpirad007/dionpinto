@@ -18,15 +18,15 @@
 			</h4>
 			<ul class="nes-list is-circle">
 				<li>
-					<a>Chip 8</a>
+					<a class="article_link" href="entropy">Series and DataFrames with Rust and WebAssembly</a>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 						<span class="is-success" style="color: white;">9/5/22</span>
 					</span>
 				</li>
 				<li>
-					<a class="article_link" href="entropy">Series and DataFrames with Rust and WebAssembly</a>
+					<a>Chip 8</a>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-success" style="color: white;">9/5/22</span>
+						<span class="is-error" style="color: white;">Coming Soon</span>
 					</span>
 				</li>
 			</ul>
@@ -36,7 +36,7 @@
 				<li>
 					<a>Rusty Deep Learning</a>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-success" style="color: white;">9/5/22</span>
+						<span class="is-error" style="color: white;">Coming Soon</span>
 					</span>
 				</li>
 			</ul>
@@ -79,7 +79,7 @@
 			'head'
 			'main'
 			'foot';
-		grid-template-rows: 0.1fr 0.8fr 0.1fr;
+		grid-template-rows: 50px 1fr 50px;
 	}
 	header {
 		grid-area: head;
@@ -91,5 +91,17 @@
 
 	footer {
 		grid-area: foot;
+	}
+
+	@media only screen and (max-width: 740px) {
+		.main {
+			padding: 1rem;
+			display: grid;
+			grid-template-areas:
+				'head'
+				'main'
+				'foot';
+			grid-template-rows: 130px 1fr 70px;
+		}
 	}
 </style>

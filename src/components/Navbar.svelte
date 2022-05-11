@@ -19,13 +19,18 @@
 </main>
 
 <style>
-	#search_field {
-		width: 20%;
-	}
 	#container {
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	@media only screen and (max-width: 530px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
 	}
 </style>

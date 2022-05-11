@@ -69,11 +69,10 @@
 				The problem with utilizing a standard vector is we would have no access to fast and
 				efficient operations which we would have to perform on the series and dataframes. The
 				ndarray crate provides various methods which facilitate quick operations. It also provides
-				various additional functionality such as its support with serde [3] which allows us to
-				quickly serialize and deserialize data from JavaScript to Rust and vice versa. Other than
-				that, ndarray also supports rayon [4] which gives us access to parallel iterators and
-				parallel methods. ml-wasm/entropy utilizes ndarrays with the use of a ml-wasm/linalg utility
-				wrapper.
+				various additional functionality such as its support with serde which allows us to quickly
+				serialize and deserialize data from JavaScript to Rust and vice versa. Other than that,
+				ndarray also supports rayon which gives us access to parallel iterators and parallel
+				methods. ml-wasm/entropy utilizes ndarrays with the use of a ml-wasm/linalg utility wrapper.
 			</p>
 		</section>
 
@@ -87,9 +86,9 @@
 				console logging etc.
 			</p>
 			<p>
-				Wasm-bindgen [5] allows the end user to access methods written in Rust with the advantages
-				of its speed and added memory safety all in JavaScript. As it is compiled into wasm it also
-				has near native speed, which is comparable to stock Rust.
+				Wasm-bindgen allows the end user to access methods written in Rust with the advantages of
+				its speed and added memory safety all in JavaScript. As it is compiled into wasm it also has
+				near native speed, which is comparable to stock Rust.
 			</p>
 		</section>
 
@@ -100,30 +99,30 @@
 				For the entire lifetime of programming languages there has always been the focus on either
 				the speed of the language or the memory safety of the language. A classic example would be
 				programming languages with or without a garbage collector. Languages with inbuilt garbage
-				collector generally tend to be slower example ruby [6] than the likes of those without one
-				like C++ [7]. However, many memory safety issues arise due to a lack of a garbage collector.
+				collector generally tend to be slower example ruby than the likes of those without one like
+				C++. However, many memory safety issues arise due to a lack of a garbage collector.
 			</p>
 			<p>
 				Rust however comes up with a solution that is both fast since it does not require a garbage
-				collector but also ensures memory safety with concepts such as ownership and borrowing [8].
+				collector but also ensures memory safety with concepts such as ownership and borrowing.
 				However, no solution is perfect and the cost of utilizing Rust is slower compilation time
 				and many compilation errors along with a higher learning curve just to begin using Rust.
 			</p>
 			<p>
 				For the purposes of this library however Rust is excellent as it has great support with
 				libraries such as wasm-bindgen and excellent documentation with Rust used together with
-				WebAssembly and tools such as wasm-pack [9].
+				WebAssembly and tools such as wasm-pack.
 			</p>
 
 			<p>
-				Senior software engineer Mohit Agarwal outlined his involvement with Rust in his blog [10].
-				After evaluation of runtime performances of Rust against other popular compiled and
-				interpreted languages like java and python, some surprising results were found. Rust is
-				twice as fast when compared to Java but only uses 1% of its memory. When compared with
-				python, Rust is 150 times faster but it uses the same amount of memory. In a study by IBM
-				[11], it was found that Rust and WebAssembly are nearly 15 times faster than Scala which is
-				conventionally considered a high-performance language. Luca Palmieri published an article
-				[12] claiming that for simple machine tasks Rust is up to 25 times faster than Python.
+				Senior software engineer Mohit Agarwal outlined his involvement with Rust in his blog. After
+				evaluation of runtime performances of Rust against other popular compiled and interpreted
+				languages like java and python, some surprising results were found. Rust is twice as fast
+				when compared to Java but only uses 1% of its memory. When compared with python, Rust is 150
+				times faster but it uses the same amount of memory. In a study by IBM, it was found that
+				Rust and WebAssembly are nearly 15 times faster than Scala which is conventionally
+				considered a high-performance language. Luca Palmieri published an article claiming that for
+				simple machine tasks Rust is up to 25 times faster than Python.
 			</p>
 		</section>
 
@@ -131,9 +130,8 @@
 			<Title type={5} title="Why WebAssembly?" />
 
 			<p>
-				WebAssembly [13] is like a low-level assembly language which can be run on the browser. It
-				allows code compiled on various languages to be run on the browser at nearly their native
-				speeds.
+				WebAssembly is like a low-level assembly language which can be run on the browser. It allows
+				code compiled on various languages to be run on the browser at nearly their native speeds.
 			</p>
 			<p>
 				Thus, for our library we will write the code in Rust and then compile it to WebAssembly,
@@ -153,7 +151,39 @@
 				Integer 32bit, Float 64bit or String. Multiple methods can be utilized on the series
 				depending on the use case of the developer.
 			</p>
-			<h2>code block</h2>
+
+			<h4 style="font-style: italic;">
+				<span style="color: #209cee;"># </span><a
+					href="https://ml-wasm.github.io/entropy/docs/series"
+					target="_blank"
+				>
+					Documentation</a
+				>
+			</h4>
+
+			<pre id="block"><code>
+				{`
+  import { SeriesI32 } from “../pkg”;
+
+  let s = new SeriesI32("oranges", [0,3,7,2]);
+
+  console.log(s.display);
+
+  // Output 
+	
+  +---------+
+  | Oranges |
+  +---------+
+  | 0       |
+  +---------+
+  | 3       |
+  +---------+
+  | 7       |
+  +---------+
+  | 2       |
+  +---------+
+				`}			
+			</code></pre>
 		</section>
 
 		<section id="df">
@@ -163,7 +193,46 @@
 				A Dataframe is a combination of multiple series of different types. It forms a table
 				structure which can be used for many methods to sanitize/manipulate data.
 			</p>
-			<h2>code block</h2>
+			<h4 style="font-style: italic;">
+				<span style="color: #209cee;"># </span><a
+					href="https://ml-wasm.github.io/entropy/docs/dataframes"
+					target="_blank"
+				>
+					Documentation</a
+				>
+			</h4>
+
+			<pre id="block"><code>
+				{`
+  import { SeriesI32, DataFrame } from “../pkg”;
+
+  let s1 = new SeriesI32("Apple", [1, 2, 3, 4, 5]);
+
+  let s2 = new SeriesF64("Orange", [1.1, 2.1, 3.1, 4.1, 1.2]);
+
+  let s3 = new SeriesSTR("Banana", ["ba", "na", "na", "na", "na"]);
+
+  let df = new DataFrame([s1.toJson(), s2.toJson(), s3.toJson()]);
+
+  console.log(df.display)
+
+  // Output 
+
+  +-------+--------+--------+
+  | Apple | Orange | Banana |
+  +-------+--------+--------+
+  | 1     | 1.1    | ba     |
+  +-------+--------+--------+
+  | 2     | 2.1    | na     |
+  +-------+--------+--------+
+  | 3     | 3.1    | na     |
+  +-------+--------+--------+
+  | 4     | 4.1    | na     |
+  +-------+--------+--------+
+  | 5     | 1.2    | na     |
+  +-------+--------+--------+
+				`}			
+			</code></pre>
 		</section>
 	</main>
 
@@ -173,6 +242,10 @@
 </main>
 
 <style>
+	#block {
+		border: 2px solid white;
+	}
+
 	a {
 		text-decoration: none;
 		color: inherit;
@@ -193,8 +266,7 @@
 	}
 
 	#index {
-		width: 30%;
-		margin: 0 auto;
+		margin: 1rem;
 	}
 	.main {
 		padding: 1rem;
@@ -203,19 +275,31 @@
 			'head'
 			'main'
 			'foot';
-		grid-template-rows: 0.1fr 0.8fr 0.1fr;
+		grid-template-rows: 50px 1fr 50px;
 	}
 	header {
 		grid-area: head;
 	}
 
 	.container {
-		padding: 1rem;
 		grid-area: main;
 		color: white;
 	}
 
 	footer {
 		grid-area: foot;
+	}
+
+	@media only screen and (max-width: 740px) {
+		.main {
+			padding: 1rem;
+			display: grid;
+			grid-template-areas:
+				'head'
+				'main'
+				'foot';
+			grid-template-rows: 130px 1fr 70px;
+			grid-template-columns: 100%;
+		}
 	}
 </style>

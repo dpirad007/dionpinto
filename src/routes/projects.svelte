@@ -78,7 +78,8 @@
 			'head'
 			'main'
 			'foot';
-		grid-template-rows: 0.1fr 0.8fr 0.1fr;
+		grid-template-rows: 50px 1fr 50px;
+		height: 100%;
 	}
 	header {
 		grid-area: head;
@@ -90,5 +91,22 @@
 
 	footer {
 		grid-area: foot;
+	}
+
+	@media only screen and (max-width: 740px) {
+		.main {
+			padding: 1rem;
+			display: grid;
+			grid-template-areas:
+				'head'
+				'main'
+				'foot';
+			grid-template-rows: 130px 1fr 70px;
+		}
+
+		.project-grid {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 </style>

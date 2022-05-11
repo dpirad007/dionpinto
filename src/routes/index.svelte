@@ -18,8 +18,11 @@
 			<span class="title-word title-word-4">Engineer</span>
 		</h1>
 
-		<div id="title_subsection" class="nes-container is-dark">
-			<p><i class="nes-octocat animate" /> Web Dev + Systems languages.</p>
+		<div class="nes-container is-dark">
+			<div id="title_subsection">
+				<i class="nes-octocat animate" />
+				<span>Web Dev + Systems languages.</span>
+			</div>
 		</div>
 	</main>
 
@@ -30,7 +33,6 @@
 
 <style>
 	.main {
-		width: 100vw;
 		height: 100vh;
 		padding: 1rem;
 		display: grid;
@@ -38,7 +40,7 @@
 			'head'
 			'main'
 			'foot';
-		grid-template-rows: 0.1fr 0.8fr 0.1fr;
+		grid-template-rows: 50px 1fr 50px;
 	}
 	header {
 		grid-area: head;
@@ -47,7 +49,6 @@
 	.container {
 		align-self: center;
 		grid-area: main;
-		margin-bottom: 200px;
 	}
 
 	footer {
@@ -113,5 +114,22 @@
 
 	#title_subsection {
 		margin: 0 2rem;
+	}
+
+	@media only screen and (max-width: 740px) {
+		#title_subsection {
+			display: grid;
+		}
+
+		.main {
+			height: 100vh;
+			padding: 1rem;
+			display: grid;
+			grid-template-areas:
+				'head'
+				'main'
+				'foot';
+			grid-template-rows: 130px 1fr 70px;
+		}
 	}
 </style>
