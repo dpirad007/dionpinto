@@ -11,6 +11,9 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : '/your-repo-name'
+		},
+		prerender: {
+			default: true
 		}
 	}
 };
