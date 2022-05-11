@@ -1,14 +1,15 @@
-import static_adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: static_adapter()
+		adapter: adapter()
 	},
 	paths: {
 		base: '/dionpinto',
 		assets: '/dionpinto'
-	}
+	},
+	target: '#svelte'
 };
 
 export default config;
