@@ -1,14 +1,18 @@
 <script>
-	import { SvelteToast } from '@zerodevx/svelte-toast';
+	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
 
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 	import Title from '../components/Title.svelte';
+
+	const comingSoonToast = () => {
+		toast.push('Coming Soon');
+	};
 </script>
 
 <SvelteToast />
 <main class="main">
-	<header><Navbar /></header>
+	<header><Navbar curPage="Blog" /></header>
 
 	<main class="container">
 		<Title type={5} title="Index" />
@@ -24,7 +28,7 @@
 					</span>
 				</li>
 				<li>
-					<a>Chip 8</a>
+					<a class="article_link" href="#" on:click={comingSoonToast}>Chip 8</a>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 						<span class="is-error" style="color: white;">Coming Soon</span>
 					</span>
@@ -34,7 +38,7 @@
 			<h4><span style="color: #209cee;">#</span> Project Ideas</h4>
 			<ul class="nes-list is-circle">
 				<li>
-					<a>Rusty Deep Learning</a>
+					<a class="article_link" href="#" on:click={comingSoonToast}>Rusty Deep Learning</a>
 					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 						<span class="is-error" style="color: white;">Coming Soon</span>
 					</span>

@@ -8,7 +8,7 @@
 
 <SvelteToast />
 <main class="main">
-	<header><Navbar /></header>
+	<header><Navbar curPage="Blog" /></header>
 
 	<main class="container">
 		<div id="title">

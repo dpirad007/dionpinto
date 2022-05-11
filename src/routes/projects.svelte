@@ -47,7 +47,7 @@
 
 <SvelteToast />
 <main class="main">
-	<header><Navbar /></header>
+	<header><Navbar curPage="Projects" /></header>
 
 	<main class="container">
 		<div class="project-grid">

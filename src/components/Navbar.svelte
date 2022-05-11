@@ -1,18 +1,34 @@
 <script>
+	export /**
+	 * @type {string}
+	 */
+	let curPage;
 </script>
 
 <main>
 	<nav id="navbar">
 		<div id="container">
 			<a href="/" class="nes-badge">
-				<span class="is-primary">Home</span>
+				{#if curPage === 'Home'}
+					<span class="is-primary">Home</span>
+				{:else}
+					<span class="is-dark">Home</span>
+				{/if}
 			</a>
 			<a href="projects" class="nes-badge">
-				<span class="is-dark">Projects</span>
+				{#if curPage === 'Projects'}
+					<span class="is-primary">Projects</span>
+				{:else}
+					<span class="is-dark">Projects</span>
+				{/if}
 			</a>
 
 			<a href="blog" class="nes-badge">
-				<span class="is-dark">Blog</span>
+				{#if curPage === 'Blog'}
+					<span class="is-primary">Blog</span>
+				{:else}
+					<span class="is-dark">Blog</span>
+				{/if}
 			</a>
 		</div>
 	</nav>

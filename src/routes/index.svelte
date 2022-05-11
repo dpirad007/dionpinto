@@ -7,7 +7,7 @@
 
 <SvelteToast />
 <main class="main">
-	<header><Navbar /></header>
+	<header><Navbar curPage="Home" /></header>
 
 	<main class="container">
 		<h1 class="title">
