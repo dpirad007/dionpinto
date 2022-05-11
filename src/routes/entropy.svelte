@@ -14,7 +14,7 @@
 		<div id="title">
 			<Title type={2} title="Entropy" />
 			<h4>Fast, Series and DataFrames powered by WebAssembly and Rust.</h4>
-			<h5>5th May 2022 ~ Dion Pinto</h5>
+			<h5 style="font-style: italic;">5th May 2022 ~ Dion Pinto</h5>
 		</div>
 		<div id="index" class="nes-container is-rounded is-dark">
 			<div><a href="#introduction">Introduction</a></div>

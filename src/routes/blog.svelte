@@ -17,45 +17,54 @@
 
 	<main class="container">
 		<Title type={2} title="Index" />
-		<ul id="blog_list" class="nes-list is-circle">
+
+		<div id="blog_list">
 			<h4>
 				<span style="color: #209cee;">#</span> Articles
 			</h4>
-			<ul class="nes-list is-circle">
-				<li>
-					<a class="article_link" href="{base}/entropy"
-						>Series and DataFrames with Rust and WebAssembly</a
-					>
-					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-success" style="color: white;">9/5/22</span>
-					</span>
-				</li>
-				<li>
-					<a class="article_link" href="#" on:click={comingSoonToast}
-						>Publish SvelteKit App on gh-pages</a
-					>
-					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-error" style="color: white;">Coming Soon</span>
-					</span>
-				</li>
-				<li>
-					<a class="article_link" href="#" on:click={comingSoonToast}>Chip 8</a>
-					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-error" style="color: white;">Coming Soon</span>
-					</span>
-				</li>
-			</ul>
+			<div class="article">
+				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/entropy"
+					>Series and DataFrames with Rust and WebAssembly</a
+				>
+				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+					<span class="is-success" style="color: white;">9/5/22</span>
+				</span>
+			</div>
+			<div class="article">
+				<span style="color: #209cee;">=> </span><a
+					class="article_link"
+					href="#"
+					on:click={comingSoonToast}>Publish SvelteKit App on gh-pages</a
+				>
+				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+					<span class="is-error" style="color: white;">Coming Soon</span>
+				</span>
+			</div>
+			<div class="article">
+				<span style="color: #209cee;">=> </span><a
+					class="article_link"
+					href="#"
+					on:click={comingSoonToast}>Chip 8</a
+				>
+				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+					<span class="is-error" style="color: white;">Coming Soon</span>
+				</span>
+			</div>
+		</div>
 
+		<div id="blog_list">
 			<h4><span style="color: #209cee;">#</span> Project Ideas</h4>
-			<ul class="nes-list is-circle">
-				<li>
-					<a class="article_link" href="#" on:click={comingSoonToast}>Rusty Deep Learning</a>
-					<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-						<span class="is-error" style="color: white;">Coming Soon</span>
-					</span>
-				</li>
-			</ul>
-		</ul>
+			<div class="article">
+				<span style="color: #209cee;">=> </span><a
+					class="article_link"
+					href="#"
+					on:click={comingSoonToast}>Rusty Deep Learning</a
+				>
+				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+					<span class="is-error" style="color: white;">Coming Soon</span>
+				</span>
+			</div>
+		</div>
 	</main>
 
 	<footer>
@@ -73,11 +82,11 @@
 		color: white;
 	}
 
-	#blog_list li {
-		margin: 1rem;
+	#blog_list div {
+		margin: 1rem 0rem 1rem 0rem;
 	}
 
-	#blog_list li:hover {
+	#blog_list div:hover {
 		color: #209cee;
 	}
 
@@ -117,6 +126,12 @@
 				'main'
 				'foot';
 			grid-template-rows: 130px 1fr 70px;
+		}
+
+		.article {
+			display: grid;
+			grid-template-columns: 50px 1fr 110px;
+			max-width: 100vw;
 		}
 	}
 </style>
