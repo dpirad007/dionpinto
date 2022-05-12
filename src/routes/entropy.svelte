@@ -187,7 +187,7 @@
 		</section>
 
 		<section id="df">
-			<Title type={5} title="DatFrame" />
+			<Title type={5} title="DataFrame" />
 
 			<p>
 				A Dataframe is a combination of multiple series of different types. It forms a table

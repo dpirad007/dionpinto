@@ -23,7 +23,8 @@
 		justify-content: center;
 	}
 
-	i {
+	section a,
+	div {
 		margin: 1rem;
 	}
 </style>

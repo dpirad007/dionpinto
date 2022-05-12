@@ -1,14 +1,10 @@
 <script>
 	import { base } from '$app/paths';
-	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
+	import { SvelteToast } from '@zerodevx/svelte-toast';
 
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 	import Title from '../components/Title.svelte';
-
-	const comingSoonToast = () => {
-		toast.push('Coming Soon');
-	};
 </script>
 
 <SvelteToast />
@@ -19,9 +15,10 @@
 		<Title type={2} title="Index" />
 
 		<div id="blog_list">
-			<h4>
-				<span style="color: #209cee;">#</span> Articles
-			</h4>
+			<h3>
+				<span style="color: #209cee;"># </span>
+				<i style="border-bottom: 2px solid white;">Articles</i>
+			</h3>
 			<div class="article">
 				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/entropy"
 					>Series and DataFrames with Rust and WebAssembly</a
@@ -31,21 +28,23 @@
 				</span>
 			</div>
 			<div class="article">
-				<span style="color: #209cee;">=> </span><a
-					class="article_link"
-					href="#"
-					on:click={comingSoonToast}>Publish SvelteKit App on gh-pages</a
+				<span style="color: #209cee;">=> </span><a class="article_link" href="#"
+					>Publish SvelteKit App on gh-pages</a
 				>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 					<span class="is-error" style="color: white;">Coming Soon</span>
 				</span>
 			</div>
 			<div class="article">
-				<span style="color: #209cee;">=> </span><a
-					class="article_link"
-					href="#"
-					on:click={comingSoonToast}>Chip 8</a
+				<span style="color: #209cee;">=> </span><a class="article_link" href="#"
+					>Maintain Upptime for your site</a
 				>
+				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+					<span class="is-error" style="color: white;">Coming Soon</span>
+				</span>
+			</div>
+			<div class="article">
+				<span style="color: #209cee;">=> </span><a class="article_link" href="#">Chip 8</a>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 					<span class="is-error" style="color: white;">Coming Soon</span>
 				</span>
@@ -53,12 +52,14 @@
 		</div>
 
 		<div id="blog_list">
-			<h4><span style="color: #209cee;">#</span> Project Ideas</h4>
+			<h3>
+				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;"
+					>Project Ideas</i
+				>
+			</h3>
 			<div class="article">
-				<span style="color: #209cee;">=> </span><a
-					class="article_link"
-					href="#"
-					on:click={comingSoonToast}>Rusty Deep Learning</a
+				<span style="color: #209cee;">=> </span><a class="article_link" href="#"
+					>Rusty Deep Learning</a
 				>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 					<span class="is-error" style="color: white;">Coming Soon</span>
@@ -90,12 +91,11 @@
 		color: #209cee;
 	}
 
-	#blog_list h4 {
+	#blog_list h3 {
 		margin: 3rem 0 0 0;
 	}
 
 	.main {
-		width: 100vw;
 		height: 100vh;
 		padding: 1rem;
 		display: grid;
