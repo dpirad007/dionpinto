@@ -244,6 +244,7 @@
 <style>
 	#block {
 		border: 2px solid white;
+		font-size: small;
 	}
 
 	a {
