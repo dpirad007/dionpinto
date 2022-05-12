@@ -5,15 +5,15 @@
 		<link rel="icon" href="/dionpinto/logo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/entropy.svelte-821dfa5e.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/entropy.svelte-2c340038.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
-	<link rel="modulepreload" href="/dionpinto/_app/start-a43f4aec.js">
+	<link rel="modulepreload" href="/dionpinto/_app/start-a44c3d0f.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/entropy.svelte-318676ea.js">
-	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-9c2a65ce.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/entropy.svelte-ce0e9904.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
 		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
@@ -23,47 +23,40 @@
 			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
 			rel="stylesheet"
 		/>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CX0XWQ7ZH"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-
-			gtag('config', 'G-2CX0XWQ7ZH');
-		</script>
 	</head>
 	<body style="background-color: black">
 		<div>
 
 
+<head><meta name="author" content="Dion Pinto">
+	<meta name="description" content="Series and DataFrames with Rust and WebAssembly">
+	<title>Series and DataFrames with Rust and WebAssembly.</title></head>
+
 <ul class="_toastContainer svelte-yh90az">
 </ul>
-<main class="main svelte-auedp1"><header class="svelte-auedp1"><main><nav id="navbar"><div id="container" class="svelte-1ym1ow9"><a href="/dionpinto/" class="nes-badge"><span class="is-dark">Home</span></a>
+<main class="main svelte-10gq6v5"><header class="svelte-10gq6v5"><main><nav id="navbar"><div id="container" class="svelte-1ym1ow9"><a href="/dionpinto/" class="nes-badge"><span class="is-dark">Home</span></a>
 			<a href="/dionpinto/projects" class="nes-badge"><span class="is-dark">Projects</span></a>
 
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container svelte-auedp1"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">Entropy</span></h2>
+	<main class="container svelte-10gq6v5"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">Entropy</span></h2>
 </main>
 			<h4>Fast, Series and DataFrames powered by WebAssembly and Rust.</h4>
 			<h5 style="font-style: italic;">5th May 2022 ~ Dion Pinto</h5></div>
-		<div id="index" class="nes-container is-rounded is-dark svelte-auedp1"><div><a href="#introduction" class="svelte-auedp1">Introduction</a></div>
-			<div><a href="#ml-wasm/entropy" class="svelte-auedp1">What is ml-wasm/entropy</a></div>
-			<div><a href="#ndarray" class="svelte-auedp1">Why Ndarray</a></div>
-			<div><a href="#wasm-bindgen" class="svelte-auedp1">What is wasm-bindgen</a></div>
-			<div><a href="#rust" class="svelte-auedp1">Why Rust</a></div>
-			<div><a href="#wasm" class="svelte-auedp1">Why WebAssembly</a></div>
-			<div><a href="#series" class="svelte-auedp1">Series</a></div>
-			<div><a href="#df" class="svelte-auedp1">Dataframe</a></div></div>
+		<div id="index" class="nes-container is-rounded is-dark svelte-10gq6v5"><div class="svelte-10gq6v5"><a href="#introduction" class="svelte-10gq6v5">Introduction</a></div>
+			<div class="svelte-10gq6v5"><a href="#ml-wasm/entropy" class="svelte-10gq6v5">What is ml-wasm/entropy</a></div>
+			<div class="svelte-10gq6v5"><a href="#ndarray" class="svelte-10gq6v5">Why Ndarray</a></div>
+			<div class="svelte-10gq6v5"><a href="#wasm-bindgen" class="svelte-10gq6v5">What is wasm-bindgen</a></div>
+			<div class="svelte-10gq6v5"><a href="#rust" class="svelte-10gq6v5">Why Rust</a></div>
+			<div class="svelte-10gq6v5"><a href="#wasm" class="svelte-10gq6v5">Why WebAssembly</a></div>
+			<div class="svelte-10gq6v5"><a href="#series" class="svelte-10gq6v5">Series</a></div>
+			<div class="svelte-10gq6v5"><a href="#df" class="svelte-10gq6v5">Dataframe</a></div></div>
 
-		<section id="introduction" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
+		<section id="introduction" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
 </main>
 
-			<p class="svelte-auedp1">Machine learning is an integral part of society. A fundamental cog in the machine learning
+			<p class="svelte-10gq6v5">Machine learning is an integral part of society. A fundamental cog in the machine learning
 				wheel is data analysis, feature detection and manipulation along with visualisation.
 				However, the current machine learning landscape is dominated by Python and its ML ecosystem
 				consisting of NumPy, Pandas, Matplotlib and Sklearn. The problem with using python for this
@@ -72,27 +65,27 @@
 				library that runs in the browser powered by WebAssembly and Rust.
 			</p></section>
 
-		<section id="ml-wasm/entropy" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>What is ml-wasm/entropy</span></h4>
+		<section id="ml-wasm/entropy" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>What is ml-wasm/entropy</span></h4>
 </main>
 
-			<p class="svelte-auedp1">Many organizations now run machine learning models on the browser. The most accessible way
+			<p class="svelte-10gq6v5">Many organizations now run machine learning models on the browser. The most accessible way
 				to interact with machine learning is through the browser as such using the browser for data
 				preprocessing and wrangling is the logical next step.
 			</p>
-			<p class="svelte-auedp1">Entropy stands for the degree of disorder and the ml-wasm/entropy library lets its users
+			<p class="svelte-10gq6v5">Entropy stands for the degree of disorder and the ml-wasm/entropy library lets its users
 				reduce the entropy of your data by structuring your data into series and dataframes from
 				where they can manipulate the data, preprocess it and make it their own.
 			</p></section>
 
-		<section id="ndarray" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>Why Ndarray?</span></h4>
+		<section id="ndarray" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>Why Ndarray?</span></h4>
 </main>
 
-			<p class="svelte-auedp1">The ndarray crate provides an n-dimensional container for general elements and for numerics.
+			<p class="svelte-10gq6v5">The ndarray crate provides an n-dimensional container for general elements and for numerics.
 				ml-wasm/entropy utilizes ndarray as its internal data representation. When we considered the
 				creation of a series and dataframe like structures the options to consider for its internal
 				data representation was a standard Rust vector or a ndarray.
 			</p>
-			<p class="svelte-auedp1">The problem with utilizing a standard vector is we would have no access to fast and
+			<p class="svelte-10gq6v5">The problem with utilizing a standard vector is we would have no access to fast and
 				efficient operations which we would have to perform on the series and dataframes. The
 				ndarray crate provides various methods which facilitate quick operations. It also provides
 				various additional functionality such as its support with serde which allows us to quickly
@@ -101,39 +94,39 @@
 				methods. ml-wasm/entropy utilizes ndarrays with the use of a ml-wasm/linalg utility wrapper.
 			</p></section>
 
-		<section id="wasm-bindgen" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>What is wasm-bindgen</span></h4>
+		<section id="wasm-bindgen" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>What is wasm-bindgen</span></h4>
 </main>
 
-			<p class="svelte-auedp1">It is a Rust library that allows wasm and JavaScript to interact with each other. This is
+			<p class="svelte-10gq6v5">It is a Rust library that allows wasm and JavaScript to interact with each other. This is
 				the package that lets us write code in Rust and then talk to JavaScript and interact with
 				it. It allows us to import JavaScript functionality into Rust such as DOM manipulation,
 				console logging etc.
 			</p>
-			<p class="svelte-auedp1">Wasm-bindgen allows the end user to access methods written in Rust with the advantages of
+			<p class="svelte-10gq6v5">Wasm-bindgen allows the end user to access methods written in Rust with the advantages of
 				its speed and added memory safety all in JavaScript. As it is compiled into wasm it also has
 				near native speed, which is comparable to stock Rust.
 			</p></section>
 
-		<section id="rust" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>Why Rust?</span></h4>
+		<section id="rust" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>Why Rust?</span></h4>
 </main>
 
-			<p class="svelte-auedp1">For the entire lifetime of programming languages there has always been the focus on either
+			<p class="svelte-10gq6v5">For the entire lifetime of programming languages there has always been the focus on either
 				the speed of the language or the memory safety of the language. A classic example would be
 				programming languages with or without a garbage collector. Languages with inbuilt garbage
 				collector generally tend to be slower example ruby than the likes of those without one like
 				C++. However, many memory safety issues arise due to a lack of a garbage collector.
 			</p>
-			<p class="svelte-auedp1">Rust however comes up with a solution that is both fast since it does not require a garbage
+			<p class="svelte-10gq6v5">Rust however comes up with a solution that is both fast since it does not require a garbage
 				collector but also ensures memory safety with concepts such as ownership and borrowing.
 				However, no solution is perfect and the cost of utilizing Rust is slower compilation time
 				and many compilation errors along with a higher learning curve just to begin using Rust.
 			</p>
-			<p class="svelte-auedp1">For the purposes of this library however Rust is excellent as it has great support with
+			<p class="svelte-10gq6v5">For the purposes of this library however Rust is excellent as it has great support with
 				libraries such as wasm-bindgen and excellent documentation with Rust used together with
 				WebAssembly and tools such as wasm-pack.
 			</p>
 
-			<p class="svelte-auedp1">Senior software engineer Mohit Agarwal outlined his involvement with Rust in his blog. After
+			<p class="svelte-10gq6v5">Senior software engineer Mohit Agarwal outlined his involvement with Rust in his blog. After
 				evaluation of runtime performances of Rust against other popular compiled and interpreted
 				languages like java and python, some surprising results were found. Rust is twice as fast
 				when compared to Java but only uses 1% of its memory. When compared with python, Rust is 150
@@ -143,31 +136,31 @@
 				simple machine tasks Rust is up to 25 times faster than Python.
 			</p></section>
 
-		<section id="wasm" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>Why WebAssembly?</span></h4>
+		<section id="wasm" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>Why WebAssembly?</span></h4>
 </main>
 
-			<p class="svelte-auedp1">WebAssembly is like a low-level assembly language which can be run on the browser. It allows
+			<p class="svelte-10gq6v5">WebAssembly is like a low-level assembly language which can be run on the browser. It allows
 				code compiled on various languages to be run on the browser at nearly their native speeds.
 			</p>
-			<p class="svelte-auedp1">Thus, for our library we will write the code in Rust and then compile it to WebAssembly,
+			<p class="svelte-10gq6v5">Thus, for our library we will write the code in Rust and then compile it to WebAssembly,
 				often abbreviated as wasm. Also, since the program will be compiled, the compiler can
 				perform various compile time optimizations. Since, we are just writing Rust programs we can
 				also utilize various features that it provides most notably memory safety without negatively
 				impacting performance.
 			</p></section>
 
-		<section id="series" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>Series</span></h4>
+		<section id="series" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>Series</span></h4>
 </main>
 
-			<p class="svelte-auedp1">A series consists of a column name and the data array, the array is represented as an
+			<p class="svelte-10gq6v5">A series consists of a column name and the data array, the array is represented as an
 				ndarray utilizing the implementation of ml-wasm/linalg wrapper and can have possible types:
 				Integer 32bit, Float 64bit or String. Multiple methods can be utilized on the series
 				depending on the use case of the developer.
 			</p>
 
-			<h4 style="font-style: italic;"><span style="color: #209cee;"># </span><a href="https://ml-wasm.github.io/entropy/docs/series" target="_blank" class="svelte-auedp1">Documentation</a></h4>
+			<h4 style="font-style: italic;"><span style="color: #209cee;"># </span><a href="https://ml-wasm.github.io/entropy/docs/series" target="_blank" class="svelte-10gq6v5">Documentation</a></h4>
 
-			<pre id="block" class="svelte-auedp1"><code>
+			<pre id="block" class="svelte-10gq6v5"><code>
 				
   import { SeriesI32 } from “../pkg”;
 
@@ -191,15 +184,15 @@
 							
 			</code></pre></section>
 
-		<section id="df" class="svelte-auedp1"><main><h4 style="color: #209cee;"><span>DataFrame</span></h4>
+		<section id="df" class="svelte-10gq6v5"><main><h4 style="color: #209cee;"><span>DataFrame</span></h4>
 </main>
 
-			<p class="svelte-auedp1">A Dataframe is a combination of multiple series of different types. It forms a table
+			<p class="svelte-10gq6v5">A Dataframe is a combination of multiple series of different types. It forms a table
 				structure which can be used for many methods to sanitize/manipulate data.
 			</p>
-			<h4 style="font-style: italic;"><span style="color: #209cee;"># </span><a href="https://ml-wasm.github.io/entropy/docs/dataframes" target="_blank" class="svelte-auedp1">Documentation</a></h4>
+			<h4 style="font-style: italic;"><span style="color: #209cee;"># </span><a href="https://ml-wasm.github.io/entropy/docs/dataframes" target="_blank" class="svelte-10gq6v5">Documentation</a></h4>
 
-			<pre id="block" class="svelte-auedp1"><code>
+			<pre id="block" class="svelte-10gq6v5"><code>
 				
   import { SeriesI32, DataFrame } from “../pkg”;
 
@@ -231,17 +224,17 @@
 							
 			</code></pre></section></main>
 
-	<footer class="svelte-auedp1"><main><section id="footer" class="icon-list svelte-xw0615"><a href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
+	<footer class="svelte-10gq6v5"><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
 		<div class="svelte-xw0615"><i class="nes-icon gmail"></i></div>
-		<a href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank" class="svelte-xw0615"><i class="nes-icon linkedin"></i></a></section>
+		<a id="linkedin icon" href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank" class="svelte-xw0615"><i class="nes-icon linkedin"></i></a></section>
 </main></footer>
 </main>
 
 
-		<script type="module" data-hydrate="kifczm">
-		import { start } from "/dionpinto/_app/start-a43f4aec.js";
+		<script type="module" data-hydrate="juelek">
+		import { start } from "/dionpinto/_app/start-a44c3d0f.js";
 		start({
-			target: document.querySelector('[data-hydrate="kifczm"]').parentNode,
+			target: document.querySelector('[data-hydrate="juelek"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -252,7 +245,7 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/entropy.svelte-318676ea.js")
+						import("/dionpinto/_app/pages/entropy.svelte-ce0e9904.js")
 				],
 				params: {},
 				routeId: "entropy"
