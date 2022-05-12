@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/entropy.svelte-821dfa5e.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
-	<link rel="modulepreload" href="/dionpinto/_app/start-51e0b797.js">
+	<link rel="modulepreload" href="/dionpinto/_app/start-a43f4aec.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
@@ -23,6 +23,17 @@
 			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CX0XWQ7ZH"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-2CX0XWQ7ZH');
+		</script>
 	</head>
 	<body style="background-color: black">
 		<div>
@@ -228,7 +239,7 @@
 
 
 		<script type="module" data-hydrate="kifczm">
-		import { start } from "/dionpinto/_app/start-51e0b797.js";
+		import { start } from "/dionpinto/_app/start-a43f4aec.js";
 		start({
 			target: document.querySelector('[data-hydrate="kifczm"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
@@ -249,15 +260,4 @@
 		});
 	</script></div>
 	</body>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CX0XWQ7ZH"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'G-2CX0XWQ7ZH');
-	</script>
 </html>
