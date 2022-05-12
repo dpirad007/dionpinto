@@ -9,9 +9,11 @@
 
 <main>
 	<section id="footer" class="icon-list">
-		<a href="https://github.com/dpirad007" target="_blank"><i class="nes-icon github" /></a>
+		<a id="github icon" href="https://github.com/dpirad007" target="_blank"
+			><i class="nes-icon github" /></a
+		>
 		<div on:click={copyToClip}><i class="nes-icon gmail" /></div>
-		<a href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank"
+		<a id="linkedin icon" href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank"
 			><i class="nes-icon linkedin" /></a
 		>
 	</section>

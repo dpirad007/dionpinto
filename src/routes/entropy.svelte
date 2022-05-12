@@ -6,6 +6,12 @@
 	import Title from '../components/Title.svelte';
 </script>
 
+<head>
+	<meta name="author" content="Dion Pinto" />
+	<meta name="description" content="Series and DataFrames with Rust and WebAssembly" />
+	<title>Series and DataFrames with Rust and WebAssembly.</title>
+</head>
+
 <SvelteToast />
 <main class="main">
 	<header><Navbar curPage="Blog" /></header>
@@ -267,6 +273,10 @@
 	}
 
 	#index {
+		margin: 1rem;
+	}
+
+	#index div {
 		margin: 1rem;
 	}
 	.main {

@@ -45,6 +45,12 @@
 	];
 </script>
 
+<head>
+	<meta name="author" content="Dion Pinto" />
+	<meta name="description" content="Projects of Dion Pinto" />
+	<title>Projects of Dion Pinto</title>
+</head>
+
 <SvelteToast />
 <main class="main">
 	<header><Navbar curPage="Projects" /></header>

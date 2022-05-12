@@ -6,6 +6,12 @@
 	import Title from '../components/Title.svelte';
 </script>
 
+<head>
+	<meta name="author" content="Dion Pinto" />
+	<meta name="description" content="Publish SvelteKit Apps on gh-pages" />
+	<title>Publish SvelteKit Apps on gh-pages</title>
+</head>
+
 <SvelteToast />
 <main class="main">
 	<header><Navbar curPage="Blog" /></header>
@@ -37,7 +43,7 @@
 				<a
 					id="link"
 					href="https://svelteland.github.io/svelte-kit-blog-demo/deply-to-github"
-					target="_blank">(Link)</a
+					target="_blank">(Svelteland Link)</a
 				> did not work for me (NOTE: I am a moron who makes a lot of mistakes!!!)
 			</p>
 
@@ -46,7 +52,7 @@
 					id="link"
 					href="https://github.com/dpirad007/dionpinto"
 					target="_blank"
-					alt="Dion Pinto Git repo">(Link)</a
+					alt="Dion Pinto Git repo">(Repository Link)</a
 				>
 			</p>
 		</section>
@@ -208,6 +214,11 @@
 	#index {
 		margin: 1rem;
 	}
+
+	#index div {
+		margin: 1rem;
+	}
+
 	.main {
 		padding: 1rem;
 		display: grid;

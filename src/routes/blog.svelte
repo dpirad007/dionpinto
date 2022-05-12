@@ -7,6 +7,12 @@
 	import Title from '../components/Title.svelte';
 </script>
 
+<head>
+	<meta name="author" content="Dion Pinto" />
+	<meta name="description" content="Articles of Dion Pinto" />
+	<title>Articles of Dion Pinto</title>
+</head>
+
 <SvelteToast />
 <main class="main">
 	<header><Navbar curPage="Blog" /></header>
