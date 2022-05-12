@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/dionpinto/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/sveltekitPublish.svelte-16a954f6.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
+	<link rel="modulepreload" href="/dionpinto/_app/start-f81cca89.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
+	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/sveltekitPublish.svelte-c3034bff.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-9c2a65ce.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
+		<!-- latest -->
+		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body style="background-color: black">
+		<div>
+
+
+<ul class="_toastContainer svelte-yh90az">
+</ul>
+<main class="main svelte-wvhd7z"><header class="svelte-wvhd7z"><main><nav id="navbar"><div id="container" class="svelte-1ym1ow9"><a href="/dionpinto/" class="nes-badge"><span class="is-dark">Home</span></a>
+			<a href="/dionpinto/projects" class="nes-badge"><span class="is-dark">Projects</span></a>
+
+			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
+</main></header>
+
+	<main class="container svelte-wvhd7z"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">SvelteKit on gh-pages</span></h2>
+</main>
+			<h4>Publish SvelteKit Apps on gh-pages</h4>
+			<h5 style="font-style: italic;">12th May 2022 ~ Dion Pinto</h5></div>
+		<div id="index" class="nes-container is-rounded is-dark svelte-wvhd7z"><div><a href="#introduction" class="svelte-wvhd7z">Introduction</a></div>
+			<div><a href="#initialization" class="svelte-wvhd7z">Initialization</a></div>
+			<div><a href="#gh-pages" class="svelte-wvhd7z">Configure Github Pages</a></div>
+			<div><a href="#config-sk" class="svelte-wvhd7z">Configure SvelteKit</a></div>
+			<div><a href="#nojekyll" class="svelte-wvhd7z">Add .nojekyll file in static</a></div>
+			<div><a href="#deploy" class="svelte-wvhd7z">Deploy</a></div></div>
+
+		<section id="introduction" class="svelte-wvhd7z"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
+</main>
+
+			<p class="svelte-wvhd7z">I chose SvelteKit to build my portfolio website because I wanted to learn svelte or atleast
+				get a feel for the framework. While utilising SvelteKit I came across some hurdles and
+				challenges one of them being publishing the finished site, there are a plethora of resources
+				available to publish a SvelteKit app to gh-pages however the approach via the svelteLand
+				sveltekit blog site
+				<a id="link" href="https://svelteland.github.io/svelte-kit-blog-demo/deply-to-github" target="_blank" class="svelte-wvhd7z">(Link)</a> did not work for me (NOTE: I am a moron who makes a lot of mistakes!!!)
+			</p>
+
+			<p class="svelte-wvhd7z">You can find the git repository here <a id="link" href="https://github.com/dpirad007/dionpinto" target="_blank" alt="Dion Pinto Git repo" class="svelte-wvhd7z">(Link)</a></p></section>
+
+		<section id="initialization" class="svelte-wvhd7z"><main><h4 style="color: #209cee;"><span>Initialization</span></h4>
+</main>
+
+			<p class="svelte-wvhd7z">I am assuming that you already have created a SvelteKit application and a git repo for that
+				application. If not, create them now.
+			</p></section>
+
+		<section id="gh-pages" class="svelte-wvhd7z"><main><h4 style="color: #209cee;"><span>Configure Github Pages</span></h4>
+</main>
+
+			<p class="svelte-wvhd7z">The approach on the svelteLand blog was to host the site on a separate gh-pages branch on
+				the /root folder, this would be my suggested approach as well as having a separate branch
+				for the deployed jargon code is better, the main branch remains relatively clutter free.
+				However, due to an unrelated error which I will come to later, I mistakenly thought this
+				approach was wrong and I hosted the site in the /docs folder on the main branch (NOTE: Both
+				of these approaches would work just fine.)
+			</p>
+
+			<p class="svelte-wvhd7z">You can configure it as follows: Go to the repository settings -&gt; pages</p>
+
+			<img id="image" src="sveltekitPublish/1sp.png" alt="github pages" class="svelte-wvhd7z"></section>
+
+		<section id="config-sk" class="svelte-wvhd7z"><main><h4 style="color: #209cee;"><span>Configure SvelteKit</span></h4>
+</main>
+
+			<p class="svelte-wvhd7z">First we need to install the SvelteKit Static Adapter. It will output our app as a static
+				set of files instead of a dynamic app.
+			</p>
+			<pre id="block" class="svelte-wvhd7z"><code>
+				
+  npm i @sveltejs/adapter-static
+							
+			</code></pre>
+
+			<p class="svelte-wvhd7z">Now you need to edit <i><u>svelte.config.js</u></i> as follows
+			</p>
+			<pre id="block" class="svelte-wvhd7z"><code>
+				
+  import adapter from &#39;@sveltejs/adapter-static&#39;; // was adapter-auto
+
+  const dev = process.env.NODE_ENV === &#39;development&#39;; // the first half is process-&gt;env-&gt;NODE_ENV
+                                               // it is resolving to &#39;development&#39;
+                                               // (NOTE: use . instead of -&gt; while typing in file for process env NODE_ENV)
+
+  /** @type {import(&#39;@sveltejs/kit&#39;).Config} */
+  const config = {
+	  kit: {
+		  adapter: adapter({
+			  pages: &#39;docs&#39;,
+			  assets: &#39;docs&#39;
+		  }),
+		  paths: {
+			  base: dev ? &#39;&#39; : &#39;/dionpinto&#39; //Your repo name here
+		  },
+		  prerender: {
+			  default: true
+		  }
+	  }
+  };
+
+  export default config;
+							
+			</code></pre>
+
+			<p class="svelte-wvhd7z">we target the /docs folder. (NOTE: this is beacuse of the approach I took hosting the site
+				on main /docs on gh-pages)
+			</p></section>
+
+		<section id="nojekyll" class="svelte-wvhd7z"><main><h4 style="color: #209cee;"><span>Add .nojekyll file in static</span></h4>
+</main>
+
+			<p class="svelte-wvhd7z">Add a empty .nojekyll in the static folder.</p>
+
+			<img id="image" src="sveltekitPublish/2sp.png" alt=".nojekyll" class="svelte-wvhd7z"></section>
+
+		<section id="deploy" class="svelte-wvhd7z"><main><h4 style="color: #209cee;"><span>Deploy</span></h4>
+</main>
+
+			<p class="svelte-wvhd7z">We can finally deploy out application.</p>
+			<pre id="block" class="svelte-wvhd7z"><code>
+				
+  npm run build
+							
+			</code></pre>
+
+			<p class="svelte-wvhd7z">Commit and push your changes</p>
+
+			<pre id="block" class="svelte-wvhd7z"><code>
+				
+  git add docs
+
+  git commit -m &quot;Changes commited&quot;
+
+  git push
+							
+			</code></pre>
+
+			<p class="svelte-wvhd7z">gh-pages will then deploy your site</p>
+			<img id="image" src="sveltekitPublish/3sp.png" alt="github actions" class="svelte-wvhd7z"></section></main>
+
+	<footer class="svelte-wvhd7z"><main><section id="footer" class="icon-list svelte-xw0615"><a href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
+		<div class="svelte-xw0615"><i class="nes-icon gmail"></i></div>
+		<a href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank" class="svelte-xw0615"><i class="nes-icon linkedin"></i></a></section>
+</main></footer>
+</main>
+
+
+		<script type="module" data-hydrate="1y1ixil">
+		import { start } from "/dionpinto/_app/start-f81cca89.js";
+		start({
+			target: document.querySelector('[data-hydrate="1y1ixil"]').parentNode,
+			paths: {"base":"/dionpinto","assets":"/dionpinto"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
+						import("/dionpinto/_app/pages/sveltekitPublish.svelte-c3034bff.js")
+				],
+				params: {},
+				routeId: "sveltekitPublish"
+			}
+		});
+	</script></div>
+	</body>
+</html>
