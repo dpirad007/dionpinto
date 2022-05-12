@@ -28,11 +28,12 @@
 				</span>
 			</div>
 			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="#"
-					>Publish SvelteKit App on gh-pages</a
+				<span style="color: #209cee;">=> </span><a
+					class="article_link"
+					href="{base}/sveltekitPublish">Publish SvelteKit App on gh-pages</a
 				>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-error" style="color: white;">Coming Soon</span>
+					<span class="is-success" style="color: white;">12/5/22</span>
 				</span>
 			</div>
 			<div class="article">
