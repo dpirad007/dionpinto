@@ -10,15 +10,6 @@
 	<meta name="description" content="Dion Pinto's Portfolio" />
 	<title>Dion Pinto</title>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CX0XWQ7ZH"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'G-2CX0XWQ7ZH');
-	</script>
 </head>
 
 <SvelteToast />
@@ -139,7 +130,6 @@
 
 		.main {
 			height: 100vh;
-			width: 100vw;
 			padding: 1rem;
 			display: grid;
 			grid-template-areas:
