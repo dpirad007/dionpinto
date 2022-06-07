@@ -73,8 +73,9 @@
 				<button type="button" class="nes-btn is-primary" on:click={showModal}> Read More </button>
 				<dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
 					<form method="dialog">
-						<p class="title">Tech Stack</p>
-						<p>Alert: this is a dialog.</p>
+						<h3 class="title">Coming Soon</h3>
+						<p>Comprehensive details will be added soon</p>
+						<p>for now you can check out the github repositories.</p>
 						<menu id="modal_btn" class="dialog-menu">
 							<button class="nes-btn is-primary">Okay</button>
 						</menu>
@@ -86,6 +87,9 @@
 </main>
 
 <style>
+	.title {
+		padding-bottom: 2rem;
+	}
 	#modal_btn {
 		padding: 1rem 0 0 0;
 		display: flex;
