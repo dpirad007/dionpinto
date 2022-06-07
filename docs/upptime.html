@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/sveltekitPublish.svelte-f05aa51f.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/upptime.svelte-6c4ef95d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Publish SvelteKit Apps on gh-pages">
-	<title>Publish SvelteKit Apps on gh-pages</title></head>
+	<meta name="description" content=" Maintain Upptime for your site">
+	<title>Maintain Upptime for your site</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,29 +49,30 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container svelte-11c2nb1"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">SvelteKit on gh-pages</span></h2>
+	<main class="container svelte-11c2nb1"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">Upptime</span></h2>
 </main>
-			<h4>Publish SvelteKit Apps on gh-pages</h4>
-			<h5 style="font-style: italic;">12th May 2022 ~ Dion Pinto</h5></div>
+			<h4>Maintain Upptime for your site</h4>
+			<h5 style="font-style: italic;">13th May 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark svelte-11c2nb1"><div class="svelte-11c2nb1"><a href="#introduction" class="svelte-11c2nb1">Introduction</a></div>
 			<div class="svelte-11c2nb1"><a href="#initialization" class="svelte-11c2nb1">Initialization</a></div>
-			<div class="svelte-11c2nb1"><a href="#gh-pages" class="svelte-11c2nb1">Configure Github Pages</a></div>
-			<div class="svelte-11c2nb1"><a href="#config-sk" class="svelte-11c2nb1">Configure SvelteKit</a></div>
-			<div class="svelte-11c2nb1"><a href="#nojekyll" class="svelte-11c2nb1">Add .nojekyll file in static</a></div>
-			<div class="svelte-11c2nb1"><a href="#deploy" class="svelte-11c2nb1">Deploy</a></div></div>
+			<div class="svelte-11c2nb1"><a href="#config" class="svelte-11c2nb1">Configuration</a></div></div>
 
 		<section id="introduction" class="svelte-11c2nb1"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
 </main>
 
-			<p class="svelte-11c2nb1">I chose SvelteKit to build my portfolio website because I wanted to learn svelte or atleast
-				get a feel for the framework. While utilising SvelteKit I came across some hurdles and
-				challenges one of them being publishing the finished site, there are a plethora of resources
-				available to publish a SvelteKit app to gh-pages however the approach via the svelteLand
-				sveltekit blog site
-				<a id="link" href="https://svelteland.github.io/svelte-kit-blog-demo/deply-to-github" target="_blank" class="svelte-11c2nb1">(Svelteland Link)</a> did not work for me (NOTE: I am a moron who makes a lot of mistakes!!!)
+			<p class="svelte-11c2nb1">After the creation of any web application the logical next step is to put the site into
+				production. For the creation of my personal portfolio website I utilised SvelteKit and
+				hosted it on github pages (gh-pages), however , it is essential to know if you site has ever
+				gone down or crashed, you can utilise paid tools to check for the uptime of your production
+				site or you can utilise a free and open source alternative called Upptime.
+
+				<a id="link" href="https://upptime.js.org/docs/" target="_blank" class="svelte-11c2nb1">(Upptime Docs)</a></p>
+
+			<p class="svelte-11c2nb1">Uptime utilises github actions as an uptime monitor, with github issues used as incident
+				reports and github pages for the status page.
 			</p>
 
-			<p class="svelte-11c2nb1">You can find the git repository here <a id="link" href="https://github.com/dpirad007/dionpinto" target="_blank" alt="Dion Pinto Git repo" class="svelte-11c2nb1">(Repository Link)</a></p></section>
+			<p class="svelte-11c2nb1">You can find the my Upptime git repository here <a id="link" href="https://github.com/dpirad007/dionpinto-upptime" target="_blank" alt="Dion Pinto Git repo" class="svelte-11c2nb1">(Repository Link)</a></p></section>
 
 		<section id="initialization" class="svelte-11c2nb1"><main><h4 style="color: #209cee;"><span>Initialization</span></h4>
 </main>
@@ -180,10 +181,10 @@
 </main>
 
 
-		<script type="module" data-hydrate="1csuen9">
+		<script type="module" data-hydrate="1jmtkh">
 		import { start } from "/dionpinto/_app/start-464c83bf.js";
 		start({
-			target: document.querySelector('[data-hydrate="1csuen9"]').parentNode,
+			target: document.querySelector('[data-hydrate="1jmtkh"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -194,10 +195,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/sveltekitPublish.svelte-f05aa51f.js")
+						import("/dionpinto/_app/pages/upptime.svelte-6c4ef95d.js")
 				],
 				params: {},
-				routeId: "sveltekitPublish"
+				routeId: "upptime"
 			}
 		});
 	</script></div>
