@@ -26,13 +26,14 @@
 				<i style="border-bottom: 2px solid white;">Articles</i>
 			</h3>
 			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/entropy"
-					>Series and DataFrames with Rust and WebAssembly</a
+				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/upptime"
+					>Maintain Upptime for your site</a
 				>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-success" style="color: white;">9/5/22</span>
+					<span class="is-success" style="color: white;">14/6/22</span>
 				</span>
 			</div>
+
 			<div class="article">
 				<span style="color: #209cee;">=> </span><a
 					class="article_link"
@@ -42,14 +43,16 @@
 					<span class="is-success" style="color: white;">12/5/22</span>
 				</span>
 			</div>
+
 			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="#"
-					>Maintain Upptime for your site</a
+				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/entropy"
+					>Series and DataFrames with Rust and WebAssembly</a
 				>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-error" style="color: white;">Coming Soon</span>
+					<span class="is-success" style="color: white;">9/5/22</span>
 				</span>
 			</div>
+
 			<div class="article">
 				<span style="color: #209cee;">=> </span><a class="article_link" href="#">Chip 8</a>
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
