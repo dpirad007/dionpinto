@@ -73,9 +73,9 @@
 				The approach on the svelteLand blog was to host the site on a separate gh-pages branch on
 				the /root folder, this would be my suggested approach as well as having a separate branch
 				for the deployed jargon code is better, the main branch remains relatively clutter free.
-				However, due to an unrelated error which I will come to later, I mistakenly thought this
-				approach was wrong and I hosted the site in the /docs folder on the main branch (NOTE: Both
-				of these approaches would work just fine.)
+				However, due to an unrelated error, I mistakenly thought this approach was wrong and I
+				hosted the site in the /docs folder on the main branch (NOTE: Both of these approaches would
+				work just fine.)
 			</p>
 
 			<p>You can configure it as follows: Go to the repository settings -> pages</p>
