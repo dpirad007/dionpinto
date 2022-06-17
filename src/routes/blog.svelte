@@ -5,6 +5,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 	import Title from '../components/Title.svelte';
+	import Article from '../components/Article.svelte';
 </script>
 
 <head>
@@ -25,40 +26,34 @@
 				<span style="color: #209cee;"># </span>
 				<i style="border-bottom: 2px solid white;">Articles</i>
 			</h3>
-			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/upptime"
-					>Maintain Upptime for your site</a
-				>
-				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-success" style="color: white;">14/6/22</span>
-				</span>
-			</div>
 
-			<div class="article">
-				<span style="color: #209cee;">=> </span><a
-					class="article_link"
-					href="{base}/sveltekitPublish">Publish SvelteKit App on gh-pages</a
-				>
-				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-success" style="color: white;">12/5/22</span>
-				</span>
-			</div>
+			<Article
+				articleTitle={'Maintain Upptime for your site'}
+				articleLink={`${base}/upptime`}
+				articleDate={'14/6/2'}
+				status={true}
+			/>
 
-			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="{base}/entropy"
-					>Series and DataFrames with Rust and WebAssembly</a
-				>
-				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-success" style="color: white;">9/5/22</span>
-				</span>
-			</div>
+			<Article
+				articleTitle={'Publish SvelteKit App on gh-pages'}
+				articleLink={`${base}/sveltekitPublish`}
+				articleDate={'12/5/22'}
+				status={true}
+			/>
 
-			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="#">Chip 8</a>
-				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-error" style="color: white;">Coming Soon</span>
-				</span>
-			</div>
+			<Article
+				articleTitle={'Series and DataFrames with Rust and WebAssembly'}
+				articleLink={`${base}/entropy`}
+				articleDate={'9/5/22'}
+				status={true}
+			/>
+
+			<Article
+				articleTitle={'Chip 8'}
+				articleLink={'#blog_list'}
+				articleDate={'Coming Soon'}
+				status={false}
+			/>
 		</div>
 
 		<div id="blog_list">
@@ -67,14 +62,26 @@
 					>Project Ideas</i
 				>
 			</h3>
-			<div class="article">
-				<span style="color: #209cee;">=> </span><a class="article_link" href="#"
-					>Rusty Deep Learning</a
+			<Article
+				articleTitle={'Rusty Deep Learning'}
+				articleLink={'#blog_list'}
+				articleDate={'Coming Soon'}
+				status={false}
+			/>
+		</div>
+
+		<div id="blog_list">
+			<h3>
+				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;"
+					>LeetCode</i
 				>
-				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
-					<span class="is-error" style="color: white;">Coming Soon</span>
-				</span>
-			</div>
+			</h3>
+			<Article
+				articleTitle={'Blind 75'}
+				articleLink={`${base}/blind75`}
+				articleDate={'Partial'}
+				status={true}
+			/>
 		</div>
 	</main>
 
@@ -84,21 +91,8 @@
 </main>
 
 <style>
-	.article_link {
-		text-decoration: none;
-		color: inherit;
-	}
-
 	#blog_list {
 		color: white;
-	}
-
-	#blog_list div {
-		margin: 1rem 0rem 1rem 0rem;
-	}
-
-	#blog_list div:hover {
-		color: #209cee;
 	}
 
 	#blog_list h3 {
@@ -136,12 +130,6 @@
 				'main'
 				'foot';
 			grid-template-rows: 130px 1fr 70px;
-		}
-
-		.article {
-			display: grid;
-			grid-template-columns: 50px 1fr 110px;
-			max-width: 100vw;
 		}
 	}
 </style>

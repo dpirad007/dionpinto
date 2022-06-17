@@ -1,0 +1,84 @@
+<script>
+	import { base } from '$app/paths';
+	import { SvelteToast } from '@zerodevx/svelte-toast';
+
+	import Navbar from '../components/Navbar.svelte';
+	import Footer from '../components/Footer.svelte';
+	import Title from '../components/Title.svelte';
+	import Article from '../components/Article.svelte';
+</script>
+
+<head>
+	<meta name="author" content="Dion Pinto" />
+	<meta name="description" content="Articles of Dion Pinto" />
+	<title>Articles of Dion Pinto</title>
+</head>
+
+<SvelteToast />
+<main class="main">
+	<header><Navbar curPage="Blog" /></header>
+
+	<main class="container">
+		<Title type={2} title="Blind 75" />
+
+		<div id="blog_list">
+			<h3>
+				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Arrays</i>
+			</h3>
+			<Article
+				articleTitle={'11. Container With Most Water'}
+				articleLink={`${base}/blind75/containerWithMostWater`}
+				articleDate={'17/6/22'}
+				status={true}
+			/>
+		</div>
+	</main>
+
+	<footer>
+		<Footer />
+	</footer>
+</main>
+
+<style>
+	#blog_list {
+		color: white;
+	}
+
+	#blog_list h3 {
+		margin: 3rem 0 0 0;
+	}
+
+	.main {
+		height: 100vh;
+		padding: 1rem;
+		display: grid;
+		grid-template-areas:
+			'head'
+			'main'
+			'foot';
+		grid-template-rows: 50px 1fr 50px;
+	}
+	header {
+		grid-area: head;
+	}
+
+	.container {
+		grid-area: main;
+	}
+
+	footer {
+		grid-area: foot;
+	}
+
+	@media only screen and (max-width: 740px) {
+		.main {
+			padding: 1rem;
+			display: grid;
+			grid-template-areas:
+				'head'
+				'main'
+				'foot';
+			grid-template-rows: 130px 1fr 70px;
+		}
+	}
+</style>
