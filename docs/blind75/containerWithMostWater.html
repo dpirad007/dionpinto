@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/dionpinto/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
+	<link rel="modulepreload" href="/dionpinto/_app/start-e27e2fb6.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
+	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/containerWithMostWater.svelte-be4fe57a.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
+		<!-- latest -->
+		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-2CX0XWQ7ZH');
+		</script>
+	</head>
+	<body style="background-color: black">
+		<div>
+
+
+<head><meta name="author" content="Dion Pinto">
+	<meta name="description" content="Leetcode Blind 75 11. Container with most water">
+	<title>11. Container with most water</title></head>
+
+<ul class="_toastContainer svelte-yh90az">
+</ul>
+<main class="main svelte-r754dw"><header class="svelte-r754dw"><main><nav id="navbar"><div id="container" class="svelte-1ym1ow9"><a href="/dionpinto/" class="nes-badge"><span class="is-dark">Home</span></a>
+			<a href="/dionpinto/projects" class="nes-badge"><span class="is-dark">Projects</span></a>
+
+			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
+</main></header>
+
+	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">11.Container with most water</span></h2>
+</main>
+			<h4>Leetcode Blind 75</h4>
+			<h5 style="font-style: italic;">17th June 2022 ~ Dion Pinto</h5></div>
+		<div id="index" class="nes-container is-rounded is-dark svelte-r754dw"><div class="svelte-r754dw"><a href="#introduction" class="svelte-r754dw">Introduction</a></div>
+			<div class="svelte-r754dw"><a href="#code" class="svelte-r754dw">Code</a></div></div>
+
+		<section id="introduction" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
+</main>
+
+			<p class="svelte-r754dw">You are given an integer array height of length n. There are n vertical lines drawn such
+				that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that
+				together with the x-axis form a container, such that the container contains the most water.
+				Return the maximum amount of water a container can store. Notice that you may not slant the
+				container.
+
+				<a id="link" href="https://leetcode.com/problems/container-with-most-water/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
+
+		<section id="code" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
+</main>
+
+			<pre id="block" class="svelte-r754dw"><code>
+				
+    import math
+    class Solution:
+        def maxArea(self, height: List[int]) -&gt; int:
+            m=-math.inf
+            l,r = 0,len(height)-1
+        
+            while(l&lt;r):
+
+                area = (r-l)*min(height[l],height[r])
+                m=max(m,area)
+
+                if(height[l] &lt; height[r]):
+                    l+=1
+                elif(height[l] &gt; height[r]):
+                    r-=1
+                else:
+                    r-=1
+            return m
+							
+			</code></pre>
+			<p class="svelte-r754dw">Time Complexity =&gt; o(n)</p>
+			<p class="svelte-r754dw">Space Complexity =&gt; o(1)</p></section>
+		<a type="button" class="nes-btn is-primary svelte-r754dw" href="/dionpinto/blind75">Back</a></main>
+
+	<footer class="svelte-r754dw"><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
+		<div class="svelte-xw0615"><i class="nes-icon gmail"></i></div>
+		<a id="linkedin icon" href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank" class="svelte-xw0615"><i class="nes-icon linkedin"></i></a></section>
+</main></footer>
+</main>
+
+
+		<script type="module" data-hydrate="1p4193c">
+		import { start } from "/dionpinto/_app/start-e27e2fb6.js";
+		start({
+			target: document.querySelector('[data-hydrate="1p4193c"]').parentNode,
+			paths: {"base":"/dionpinto","assets":"/dionpinto"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
+						import("/dionpinto/_app/pages/blind75/containerWithMostWater.svelte-be4fe57a.js")
+				],
+				params: {},
+				routeId: "blind75/containerWithMostWater"
+			}
+		});
+	</script></div>
+	</body>
+</html>
