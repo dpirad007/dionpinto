@@ -6,6 +6,7 @@
 	import Footer from '../components/Footer.svelte';
 	import Title from '../components/Title.svelte';
 	import Article from '../components/Article.svelte';
+	import BreadCrumbs from '../components/BreadCrumbs.svelte';
 </script>
 
 <head>
@@ -20,6 +21,7 @@
 
 	<main class="container">
 		<Title type={2} title="Blind 75" />
+		<BreadCrumbs curPage="Blind75" />
 
 		<div id="blog_list">
 			<h3>
