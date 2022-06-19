@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-e27e2fb6.js",
+    "file": "start-a8b9f409.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -11,6 +11,8 @@
       ".svelte-kit/runtime/components/layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/blind75/containerWithMostWater.svelte",
+      "src/routes/blind75/twoSum.svelte",
+      "src/routes/blind75/twoSum2.svelte",
       "src/routes/blind75.svelte",
       "src/routes/blog.svelte",
       "src/routes/entropy.svelte",
@@ -39,7 +41,7 @@
     ]
   },
   "src/routes/blind75/containerWithMostWater.svelte": {
-    "file": "pages/blind75/containerWithMostWater.svelte-be4fe57a.js",
+    "file": "pages/blind75/containerWithMostWater.svelte-57c74528.js",
     "src": "src/routes/blind75/containerWithMostWater.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -50,11 +52,41 @@
       "_Title-6ea0487f.js"
     ],
     "css": [
-      "assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css"
+      "assets/pages/blind75/twoSum.svelte-498c4a77.css"
+    ]
+  },
+  "src/routes/blind75/twoSum.svelte": {
+    "file": "pages/blind75/twoSum.svelte-49ab6adb.js",
+    "src": "src/routes/blind75/twoSum.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-cd4245c1.js",
+      "_paths-c8fbcc1d.js",
+      "_Footer-8b9c5841.js",
+      "_Title-6ea0487f.js"
+    ],
+    "css": [
+      "assets/pages/blind75/twoSum.svelte-498c4a77.css"
+    ]
+  },
+  "src/routes/blind75/twoSum2.svelte": {
+    "file": "pages/blind75/twoSum2.svelte-94ed2752.js",
+    "src": "src/routes/blind75/twoSum2.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-cd4245c1.js",
+      "_paths-c8fbcc1d.js",
+      "_Footer-8b9c5841.js",
+      "_Title-6ea0487f.js"
+    ],
+    "css": [
+      "assets/pages/blind75/twoSum.svelte-498c4a77.css"
     ]
   },
   "src/routes/blind75.svelte": {
-    "file": "pages/blind75.svelte-6f4f0f90.js",
+    "file": "pages/blind75.svelte-a47c3462.js",
     "src": "src/routes/blind75.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -66,7 +98,7 @@
       "_Article-4be99b2d.js"
     ],
     "css": [
-      "assets/pages/blog.svelte-ae8f287d.css"
+      "assets/pages/blind75.svelte-92b4f04e.css"
     ]
   },
   "src/routes/blog.svelte": {
@@ -82,7 +114,7 @@
       "_Article-4be99b2d.js"
     ],
     "css": [
-      "assets/pages/blog.svelte-ae8f287d.css"
+      "assets/pages/blind75.svelte-92b4f04e.css"
     ]
   },
   "src/routes/entropy.svelte": {
@@ -140,7 +172,7 @@
       "_paths-c8fbcc1d.js"
     ],
     "css": [
-      "assets/pages/upptime.svelte-64e763de.css"
+      "assets/pages/sveltekitPublish.svelte-89eb0a49.css"
     ]
   },
   "src/routes/upptime.svelte": {
@@ -155,7 +187,7 @@
       "_paths-c8fbcc1d.js"
     ],
     "css": [
-      "assets/pages/upptime.svelte-64e763de.css"
+      "assets/pages/sveltekitPublish.svelte-89eb0a49.css"
     ]
   },
   "_index-cd4245c1.js": {
