@@ -26,6 +26,18 @@
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Arrays</i>
 			</h3>
 			<Article
+				articleTitle={'1. Two Sum'}
+				articleLink={`${base}/blind75/twoSum`}
+				articleDate={'19/6/22'}
+				status={true}
+			/>
+			<Article
+				articleTitle={'167. Two Sum II - Input Array Is Sorted'}
+				articleLink={`${base}/blind75/twoSum2`}
+				articleDate={'19/6/22'}
+				status={true}
+			/>
+			<Article
 				articleTitle={'11. Container With Most Water'}
 				articleLink={`${base}/blind75/containerWithMostWater`}
 				articleDate={'17/6/22'}

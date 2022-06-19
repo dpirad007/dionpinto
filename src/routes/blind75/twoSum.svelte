@@ -5,12 +5,14 @@
 	import Navbar from '../../components/Navbar.svelte';
 	import Footer from '../../components/Footer.svelte';
 	import Title from '../../components/Title.svelte';
+
+	const title = '1. Two Sum';
 </script>
 
 <head>
 	<meta name="author" content="Dion Pinto" />
-	<meta name="description" content="Leetcode Blind 75 11. Container with most water" />
-	<title>11. Container with most water</title>
+	<meta name="description" content={`Leetcode Blind 75 ${title}`} />
+	<title>1. Two Sum</title>
 </head>
 
 <SvelteToast />
@@ -19,58 +21,63 @@
 
 	<main class="container">
 		<div id="title">
-			<Title type={2} title="11.Container with most water" />
+			<Title type={2} {title} />
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">17th June 2022 ~ Dion Pinto</h5>
+			<h5 style="font-style: italic;">19th June 2022 ~ Dion Pinto</h5>
 		</div>
 		<div id="index" class="nes-container is-rounded is-dark">
 			<div><a href="#description">Description</a></div>
-			<div><a href="#code">Code</a></div>
+			<div><a href="#code1">Code -> Brute Force</a></div>
+			<div><a href="#code2">Code -> Hash</a></div>
 		</div>
 
 		<section id="description">
 			<Title type={5} title="Description" />
 
 			<p>
-				You are given an integer array height of length n. There are n vertical lines drawn such
-				that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that
-				together with the x-axis form a container, such that the container contains the most water.
-				Return the maximum amount of water a container can store. Notice that you may not slant the
-				container.
+				Given an array of integers nums and an integer target, return indices of the two numbers
+				such that they add up to target. You may assume that each input would have exactly one
+				solution, and you may not use the same element twice. You can return the answer in any
+				order.
 
-				<a id="link" href="https://leetcode.com/problems/container-with-most-water/" target="_blank"
-					>(Problem)</a
-				>
+				<a id="link" href="https://leetcode.com/problems/two-sum/" target="_blank">(Problem)</a>
 			</p>
 		</section>
 
-		<section id="code">
-			<Title type={5} title="Code (Python)" />
+		<section id="code1">
+			<Title type={5} title="Code (Python) -> Brute Force" />
 
 			<pre id="block"><code>
 				{`
-    import math
     class Solution:
-        def maxArea(self, height: List[int]) -> int:
-            m=-math.inf
-            l,r = 0,len(height)-1
-        
-            while(l<r):
+        def twoSum(self, nums: List[int], target: int) -> List[int]:
+            for i in range(len(nums)-1):
+                for j in range(i+1,len(nums)):
+                    if(nums[i]+nums[j]==target):
+                        return [i,j]
+				`}			
+			</code></pre>
+			<p>Time Complexity => o(n<sup>2</sup>)</p>
+			<p>Space Complexity => o(1)</p>
+		</section>
 
-                area = (r-l)*min(height[l],height[r])
-                m=max(m,area)
+		<section id="code2">
+			<Title type={5} title="Code (Python) -> Hash" />
 
-                if(height[l] < height[r]):
-                    l+=1
-                elif(height[l] > height[r]):
-                    r-=1
+			<pre id="block"><code>
+				{`
+    class Solution:
+        def twoSum(self, nums: List[int], target: int) -> List[int]:
+            d={}
+            for i in range(len(nums)):
+                if((target-nums[i]) in d):
+                    return [i,d[target-nums[i]]]
                 else:
-                    r-=1
-            return m
+                    d[nums[i]]=i
 				`}			
 			</code></pre>
 			<p>Time Complexity => o(n)</p>
-			<p>Space Complexity => o(1)</p>
+			<p>Space Complexity => o(n)</p>
 		</section>
 		<a type="button" class="nes-btn is-primary" href={`${base}/blind75`}>Back</a>
 	</main>

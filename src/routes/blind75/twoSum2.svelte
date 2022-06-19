@@ -5,11 +5,13 @@
 	import Navbar from '../../components/Navbar.svelte';
 	import Footer from '../../components/Footer.svelte';
 	import Title from '../../components/Title.svelte';
+
+	const title = '167. Two Sum II - Input Array Is Sorted';
 </script>
 
 <head>
 	<meta name="author" content="Dion Pinto" />
-	<meta name="description" content="Leetcode Blind 75 11. Container with most water" />
+	<meta name="description" content={`Leetcode Blind 75 ${title}`} />
 	<title>11. Container with most water</title>
 </head>
 
@@ -19,9 +21,9 @@
 
 	<main class="container">
 		<div id="title">
-			<Title type={2} title="11.Container with most water" />
+			<Title type={2} {title} />
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">17th June 2022 ~ Dion Pinto</h5>
+			<h5 style="font-style: italic;">19th June 2022 ~ Dion Pinto</h5>
 		</div>
 		<div id="index" class="nes-container is-rounded is-dark">
 			<div><a href="#description">Description</a></div>
@@ -32,41 +34,35 @@
 			<Title type={5} title="Description" />
 
 			<p>
-				You are given an integer array height of length n. There are n vertical lines drawn such
-				that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that
-				together with the x-axis form a container, such that the container contains the most water.
-				Return the maximum amount of water a container can store. Notice that you may not slant the
-				container.
+				Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,
+				find two numbers such that they add up to a specific target number. Let these two numbers be
+				numbers[index1] and numbers[index2] where 1 less than equal index1 less than index2 less
+				than equal numbers.length.
 
-				<a id="link" href="https://leetcode.com/problems/container-with-most-water/" target="_blank"
-					>(Problem)</a
+				<a
+					id="link"
+					href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+					target="_blank">(Problem)</a
 				>
 			</p>
 		</section>
 
 		<section id="code">
-			<Title type={5} title="Code (Python)" />
+			<Title type={5} title="Code (Python) -> 2 pointer" />
 
 			<pre id="block"><code>
 				{`
-    import math
     class Solution:
-        def maxArea(self, height: List[int]) -> int:
-            m=-math.inf
-            l,r = 0,len(height)-1
-        
+        def twoSum(self, numbers: List[int], target: int) -> List[int]:
+            l,r=0,len(numbers)-1
             while(l<r):
-
-                area = (r-l)*min(height[l],height[r])
-                m=max(m,area)
-
-                if(height[l] < height[r]):
+                s=numbers[l]+numbers[r]
+                if(s==target):
+                    return [l+1,r+1]
+                elif(s>target):
+                    r-=1
+                elif(s<target):
                     l+=1
-                elif(height[l] > height[r]):
-                    r-=1
-                else:
-                    r-=1
-            return m
 				`}			
 			</code></pre>
 			<p>Time Complexity => o(n)</p>
