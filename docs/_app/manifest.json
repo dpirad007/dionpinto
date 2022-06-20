@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-2af3f2b5.js",
+    "file": "start-00942213.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -11,6 +11,7 @@
       ".svelte-kit/runtime/components/layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/blind75/bestTimeToBuyAndSell1.svelte",
+      "src/routes/blind75/bestTimeToBuyAndSell2.svelte",
       "src/routes/blind75/containerWithMostWater.svelte",
       "src/routes/blind75/twoSum.svelte",
       "src/routes/blind75/twoSum2.svelte",
@@ -53,7 +54,22 @@
       "_Title-6ea0487f.js"
     ],
     "css": [
-      "assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css"
+      "assets/pages/blind75/bestTimeToBuyAndSell1.svelte-cf0b23ef.css"
+    ]
+  },
+  "src/routes/blind75/bestTimeToBuyAndSell2.svelte": {
+    "file": "pages/blind75/bestTimeToBuyAndSell2.svelte-ee5c3415.js",
+    "src": "src/routes/blind75/bestTimeToBuyAndSell2.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-cd4245c1.js",
+      "_paths-c8fbcc1d.js",
+      "_Footer-8b9c5841.js",
+      "_Title-6ea0487f.js"
+    ],
+    "css": [
+      "assets/pages/blind75/bestTimeToBuyAndSell1.svelte-cf0b23ef.css"
     ]
   },
   "src/routes/blind75/containerWithMostWater.svelte": {
@@ -68,7 +84,7 @@
       "_Title-6ea0487f.js"
     ],
     "css": [
-      "assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css"
+      "assets/pages/blind75/bestTimeToBuyAndSell1.svelte-cf0b23ef.css"
     ]
   },
   "src/routes/blind75/twoSum.svelte": {
@@ -83,7 +99,7 @@
       "_Title-6ea0487f.js"
     ],
     "css": [
-      "assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css"
+      "assets/pages/blind75/bestTimeToBuyAndSell1.svelte-cf0b23ef.css"
     ]
   },
   "src/routes/blind75/twoSum2.svelte": {
@@ -98,11 +114,11 @@
       "_Title-6ea0487f.js"
     ],
     "css": [
-      "assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css"
+      "assets/pages/blind75/bestTimeToBuyAndSell1.svelte-cf0b23ef.css"
     ]
   },
   "src/routes/blind75.svelte": {
-    "file": "pages/blind75.svelte-4f47ee0f.js",
+    "file": "pages/blind75.svelte-6f22be9f.js",
     "src": "src/routes/blind75.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -134,18 +150,18 @@
     ]
   },
   "src/routes/entropy.svelte": {
-    "file": "pages/entropy.svelte-ce0e9904.js",
+    "file": "pages/entropy.svelte-a12de88b.js",
     "src": "src/routes/entropy.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-cd4245c1.js",
+      "_paths-c8fbcc1d.js",
       "_Footer-8b9c5841.js",
-      "_Title-6ea0487f.js",
-      "_paths-c8fbcc1d.js"
+      "_Title-6ea0487f.js"
     ],
     "css": [
-      "assets/pages/entropy.svelte-2c340038.css"
+      "assets/pages/entropy.svelte-ae383ec2.css"
     ]
   },
   "src/routes/index.svelte": {
@@ -163,7 +179,7 @@
     ]
   },
   "src/routes/projects.svelte": {
-    "file": "pages/projects.svelte-6b7c5256.js",
+    "file": "pages/projects.svelte-3da4773a.js",
     "src": "src/routes/projects.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -177,7 +193,7 @@
     ]
   },
   "src/routes/sveltekitPublish.svelte": {
-    "file": "pages/sveltekitPublish.svelte-afc78644.js",
+    "file": "pages/sveltekitPublish.svelte-571d07c5.js",
     "src": "src/routes/sveltekitPublish.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -188,11 +204,11 @@
       "_paths-c8fbcc1d.js"
     ],
     "css": [
-      "assets/pages/upptime.svelte-64e763de.css"
+      "assets/pages/sveltekitPublish.svelte-34134ed2.css"
     ]
   },
   "src/routes/upptime.svelte": {
-    "file": "pages/upptime.svelte-320edebd.js",
+    "file": "pages/upptime.svelte-ffa86b9a.js",
     "src": "src/routes/upptime.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -203,7 +219,7 @@
       "_paths-c8fbcc1d.js"
     ],
     "css": [
-      "assets/pages/upptime.svelte-64e763de.css"
+      "assets/pages/upptime.svelte-fa6727d2.css"
     ]
   },
   "_index-cd4245c1.js": {
