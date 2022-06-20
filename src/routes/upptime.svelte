@@ -4,6 +4,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 	import Title from '../components/Title.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <head>
@@ -150,6 +151,7 @@
 			<p>The results can be seen here.</p>
 			<img id="image" src="upptime/1upp.png" alt="upptime status page" />
 		</section>
+		<a id="back-btn" type="button" class="nes-btn is-primary" href={`${base}/blog`}>Back</a>
 	</main>
 
 	<footer>
@@ -158,6 +160,10 @@
 </main>
 
 <style>
+	#back-btn:hover {
+		color: inherit;
+	}
+
 	#image {
 		max-width: 100%;
 	}

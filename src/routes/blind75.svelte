@@ -34,6 +34,12 @@
 				status={true}
 			/>
 			<Article
+				articleTitle={'122. Best Time to Buy and Sell Stock II'}
+				articleLink={`${base}/blind75/bestTimeToBuyAndSell2`}
+				articleDate={'20/6/22'}
+				status={true}
+			/>
+			<Article
 				articleTitle={'1. Two Sum'}
 				articleLink={`${base}/blind75/twoSum`}
 				articleDate={'19/6/22'}

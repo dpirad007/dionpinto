@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { SvelteToast } from '@zerodevx/svelte-toast';
 
 	import Navbar from '../components/Navbar.svelte';
@@ -240,6 +241,7 @@
 				`}			
 			</code></pre>
 		</section>
+		<a id="back-btn" type="button" class="nes-btn is-primary" href={`${base}/blog`}>Back</a>
 	</main>
 
 	<footer>
@@ -248,6 +250,10 @@
 </main>
 
 <style>
+	#back-btn:hover {
+		color: inherit;
+	}
+
 	#block {
 		border: 2px solid white;
 		font-size: small;

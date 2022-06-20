@@ -68,7 +68,12 @@
 		<p>{projectDescription}</p>
 
 		<div id="project_footer">
-			<a href={gitLink} target="_blank"><i class="nes-icon github" /></a>
+			{#if typeBadge === 'Internship'}
+				<a href={gitLink} target="_blank"><img src="externalLink.png" alt="external site logo" /></a
+				>
+			{:else}
+				<a href={gitLink} target="_blank"><i class="nes-icon github" /></a>
+			{/if}
 			<section>
 				<button type="button" class="nes-btn is-primary" on:click={showModal}> Read More </button>
 				<dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">

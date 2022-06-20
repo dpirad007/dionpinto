@@ -4,6 +4,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 	import Title from '../components/Title.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <head>
@@ -166,6 +167,7 @@
 			<p>gh-pages will then deploy your site</p>
 			<img id="image" src="sveltekitPublish/3sp.png" alt="github actions" />
 		</section>
+		<a id="back-btn" type="button" class="nes-btn is-primary" href={`${base}/blog`}>Back</a>
 	</main>
 
 	<footer>
@@ -174,6 +176,9 @@
 </main>
 
 <style>
+	#back-btn:hover {
+		color: inherit;
+	}
 	#image {
 		max-width: 100%;
 	}
