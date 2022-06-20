@@ -12,7 +12,7 @@
 <head>
 	<meta name="author" content="Dion Pinto" />
 	<meta name="description" content={`Leetcode Blind 75 ${title}`} />
-	<title>1. Two Sum</title>
+	<title>{title}</title>
 </head>
 
 <SvelteToast />
