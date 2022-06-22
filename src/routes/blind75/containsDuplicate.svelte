@@ -44,7 +44,7 @@
 		</section>
 
 		<section id="code">
-			<Title type={5} title="Code (Python) -> 2 pointer" />
+			<Title type={5} title="Code (Python)" />
 
 			<pre id="block"><code>
 				{`
