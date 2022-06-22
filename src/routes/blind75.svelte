@@ -28,6 +28,12 @@
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Arrays</i>
 			</h3>
 			<Article
+				articleTitle={'15. 3Sum'}
+				articleLink={`${base}/blind75/threeSum`}
+				articleDate={'22/6/22'}
+				status={true}
+			/>
+			<Article
 				articleTitle={'121. Best Time to Buy and Sell Stock'}
 				articleLink={`${base}/blind75/bestTimeToBuyAndSell1`}
 				articleDate={'20/6/22'}
