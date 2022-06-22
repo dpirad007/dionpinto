@@ -92,7 +92,7 @@
 				duplicates. We can notice that if we just skip the repeating values after sorting we can
 				eliminate the duplicates.
 			</p>
-			<img id="image" src="/blind75/threeSum/1ts.png" alt="duplicate value drawing" />
+			<img id="image" src="/blind75static/threeSum/1ts.png" alt="duplicate value drawing" />
 			<p>We can use the following code to do so.</p>
 
 			<pre id="block"><code>
