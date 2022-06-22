@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/twoSum2.svelte-f03c0e8a.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/containsDuplicate.svelte-6e7ed9b4.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 167. Two Sum II - Input Array Is Sorted">
-	<title>167. Two Sum II - Input Array Is Sorted</title></head>
+	<meta name="description" content="Leetcode Blind 75 217. Contains Duplicate">
+	<title>217. Contains Duplicate</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,22 +49,20 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">167. Two Sum II - Input Array Is Sorted</span></h2>
+	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">217. Contains Duplicate</span></h2>
 </main>
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">19th June 2022 ~ Dion Pinto</h5></div>
+			<h5 style="font-style: italic;">22th June 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark svelte-r754dw"><div class="svelte-r754dw"><a href="#description" class="svelte-r754dw">Description</a></div>
 			<div class="svelte-r754dw"><a href="#code" class="svelte-r754dw">Code</a></div></div>
 
 		<section id="description" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Description</span></h4>
 </main>
 
-			<p class="svelte-r754dw">Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,
-				find two numbers such that they add up to a specific target number. Let these two numbers be
-				numbers[index1] and numbers[index2] where 1 less than equal index1 less than index2 less
-				than equal numbers.length.
+			<p class="svelte-r754dw">Given an integer array nums, return true if any value appears at least twice in the array,
+				and return false if every element is distinct.
 
-				<a id="link" href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
+				<a id="link" href="https://leetcode.com/problems/contains-duplicate/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
 
 		<section id="code" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python) -&gt; 2 pointer</span></h4>
 </main>
@@ -72,20 +70,19 @@
 			<pre id="block" class="svelte-r754dw"><code>
 				
     class Solution:
-        def twoSum(self, numbers: List[int], target: int) -&gt; List[int]:
-            l,r=0,len(numbers)-1
-            while(l&lt;r):
-                s=numbers[l]+numbers[r]
-                if(s==target):
-                    return [l+1,r+1]
-                elif(s&gt;target):
-                    r-=1
-                elif(s&lt;target):
-                    l+=1
+        def containsDuplicate(self, nums: List[int]) -&gt; bool:
+            d={}
+            for i in nums:
+                if(i in d):
+                    d[i]+=1
+                    if(d[i]&gt;1):return True   
+                else:
+                    d[i]=1
+            return False 
 							
 			</code></pre>
 			<p class="svelte-r754dw">Time Complexity =&gt; o(n)</p>
-			<p class="svelte-r754dw">Space Complexity =&gt; o(1)</p></section>
+			<p class="svelte-r754dw">Space Complexity =&gt; o(n)</p></section>
 		<a type="button" class="nes-btn is-primary svelte-r754dw" href="/dionpinto/blind75">Back</a></main>
 
 	<footer class="svelte-r754dw"><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
@@ -95,10 +92,10 @@
 </main>
 
 
-		<script type="module" data-hydrate="1ut9van">
+		<script type="module" data-hydrate="1a0kff">
 		import { start } from "/dionpinto/_app/start-0c233eff.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ut9van"]').parentNode,
+			target: document.querySelector('[data-hydrate="1a0kff"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -109,10 +106,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/twoSum2.svelte-f03c0e8a.js")
+						import("/dionpinto/_app/pages/blind75/containsDuplicate.svelte-6e7ed9b4.js")
 				],
 				params: {},
-				routeId: "blind75/twoSum2"
+				routeId: "blind75/containsDuplicate"
 			}
 		});
 	</script></div>
