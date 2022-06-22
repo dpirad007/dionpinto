@@ -178,10 +178,14 @@
 	#link {
 		color: #209cee;
 	}
-
+	/* 
 	#image {
 		max-width: 100%;
 	}
+
+	section img {
+		justify-self: center;
+	} */
 
 	#block {
 		border: 2px solid white;
@@ -196,10 +200,6 @@
 	section {
 		margin-bottom: 50px;
 		display: grid;
-	}
-
-	section img {
-		justify-self: center;
 	}
 
 	p {
