@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/dionpinto/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/blind75/threeSum.svelte-2f8f4035.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
+	<link rel="modulepreload" href="/dionpinto/_app/start-45573bd6.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
+	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/threeSum.svelte-ac271666.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
+		<!-- latest -->
+		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-2CX0XWQ7ZH');
+		</script>
+	</head>
+	<body style="background-color: black">
+		<div>
+
+
+<head><meta name="author" content="Dion Pinto">
+	<meta name="description" content="Leetcode Blind 75 15. 3Sum">
+	<title>15. 3Sum</title></head>
+
+<ul class="_toastContainer svelte-yh90az">
+</ul>
+<main class="main svelte-vf5nlj"><header class="svelte-vf5nlj"><main><nav id="navbar"><div id="container" class="svelte-1ym1ow9"><a href="/dionpinto/" class="nes-badge"><span class="is-dark">Home</span></a>
+			<a href="/dionpinto/projects" class="nes-badge"><span class="is-dark">Projects</span></a>
+
+			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
+</main></header>
+
+	<main class="container svelte-vf5nlj"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">15. 3Sum</span></h2>
+</main>
+			<h4>Leetcode Blind 75</h4>
+			<h5 style="font-style: italic;">22th June 2022 ~ Dion Pinto</h5></div>
+		<div id="index" class="nes-container is-rounded is-dark svelte-vf5nlj"><div class="svelte-vf5nlj"><a href="#description" class="svelte-vf5nlj">Description</a></div>
+			<div class="svelte-vf5nlj"><a href="#explanation" class="svelte-vf5nlj">Explanation</a></div>
+			<div class="svelte-vf5nlj"><a href="#code" class="svelte-vf5nlj">Code</a></div></div>
+
+		<section id="description" class="svelte-vf5nlj"><main><h4 style="color: #209cee;"><span>Description</span></h4>
+</main>
+
+			<p class="svelte-vf5nlj">Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i
+				!= j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set
+				must not contain duplicate triplets.
+
+				<a id="link" href="https://leetcode.com/problems/3sum/" target="_blank" class="svelte-vf5nlj">(Problem)</a></p></section>
+
+		<section id="explanation" class="svelte-vf5nlj"><main><h4 style="color: #209cee;"><span>Explanation</span></h4>
+</main>
+
+			<p class="svelte-vf5nlj">I believe that 3Sum becomes rather messy because of the handling of duplicates. We can see
+				this with the following brute force approach (without handling of duplicates).
+			</p>
+			<pre id="block" class="svelte-vf5nlj"><code>
+				
+    class Solution:
+        def threeSum(self, nums: List[int]) -&gt; List[List[int]]:
+            sol=[]
+            for i in range(len(nums)-2):
+                for j in range(i+1,len(nums)-1):
+                    if(i!=j):
+                        for k in range(j+1,len(nums)):
+                            if(j!=k):
+                                if(nums[i]+nums[j]+nums[k]==0):
+                                    sol.append([nums[i],nums[j],nums[k]])
+            return sol
+
+    INPUT: [-1,0,1,2,-1,-4]
+
+    OUTPUT: [[-1,0,1],[-1,2,-1],[0,1,-1]]
+							
+			</code></pre>
+
+			<p class="svelte-vf5nlj">In the above output we can notice [-1,0,1] is repeated twice with the order being different.
+				We can solve the order issue by sorting the input array.
+			</p>
+			<pre id="block" class="svelte-vf5nlj"><code>
+				
+        ...
+        def threeSum(self, nums: List[int]) -&gt; List[List[int]]:
+            sol=[]
+            nums.sort()
+            for i in range(len(nums)-2):
+        ...
+
+        OUTPUT: [[-1,-1,2],[-1,0,1],[-1,0,1]]
+							
+			</code></pre>
+
+			<p class="svelte-vf5nlj">Cool now we atleast get the duplicates in order.Now we can focus on eliminating the
+				duplicates. We can notice that if we just skip the repeating values after sorting we can
+				eliminate the duplicates.
+			</p>
+			
+			<p class="svelte-vf5nlj">We can use the following code to do so.</p>
+
+			<pre id="block" class="svelte-vf5nlj"><code>
+				
+        ...
+        nums.sort()
+        sol=[]
+        for i in range(len(nums)-2):
+            if(i&gt;0 and nums[i]==nums[i-1]):
+                continue
+            for j in range(i+1,len(nums)-1):
+        ...
+
+        OUTPUT: [[-1,-1,2],[-1,0,1]]
+							
+			</code></pre>
+
+			<p class="svelte-vf5nlj">Now finally, we can move onto a more optimized soluton. As we have seen in <a id="link" href="/dionpinto/blind75/twoSum2" class="svelte-vf5nlj">(two Sum 2).</a>
+				Utilizing a 2 pointer approach to find the j -&gt; nums[l] and k -&gt; nums[r] values. ending with
+				a another check to ensure no duplicates occur.
+			</p>
+
+			<pre id="block" class="svelte-vf5nlj"><code>
+				
+        ...
+         else:
+            sol.append([nums[i],nums[l],nums[r]])
+                l+=1
+            while((l&lt;r) and nums[l]==nums[l-1]):
+                l+=1
+        ...
+							
+			</code></pre></section>
+
+		<section id="code" class="svelte-vf5nlj"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
+</main>
+
+			<pre id="block" class="svelte-vf5nlj"><code>
+				
+    class Solution:
+        def threeSum(self, nums: List[int]) -&gt; List[List[int]]:
+            sol=[]
+            nums.sort()
+            for i in range(len(nums)):
+                if(i&gt;0 and nums[i]==nums[i-1]):
+                    continue
+                
+                l,r=i+1,len(nums)-1
+                while(l&lt;r):
+                    
+                    threesum=nums[i]+nums[l]+nums[r]
+                    if(threesum&gt;0):
+                        r-=1
+                    elif(threesum&lt;0):
+                        l+=1
+                    else:
+                        sol.append([nums[i],nums[l],nums[r]])
+                        l+=1
+                        while((l&lt;r) and nums[l]==nums[l-1]):
+                                l+=1
+            return sol
+							
+			</code></pre>
+			<p class="svelte-vf5nlj">Time Complexity =&gt; o(n<sup>2</sup>)</p>
+			<p class="svelte-vf5nlj">Space Complexity =&gt; o(1)</p></section>
+		<a type="button" class="nes-btn is-primary svelte-vf5nlj" href="/dionpinto/blind75">Back</a></main>
+
+	<footer class="svelte-vf5nlj"><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
+		<div class="svelte-xw0615"><i class="nes-icon gmail"></i></div>
+		<a id="linkedin icon" href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank" class="svelte-xw0615"><i class="nes-icon linkedin"></i></a></section>
+</main></footer>
+</main>
+
+
+		<script type="module" data-hydrate="10y4dda">
+		import { start } from "/dionpinto/_app/start-45573bd6.js";
+		start({
+			target: document.querySelector('[data-hydrate="10y4dda"]').parentNode,
+			paths: {"base":"/dionpinto","assets":"/dionpinto"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
+						import("/dionpinto/_app/pages/blind75/threeSum.svelte-ac271666.js")
+				],
+				params: {},
+				routeId: "blind75/threeSum"
+			}
+		});
+	</script></div>
+	</body>
+</html>
