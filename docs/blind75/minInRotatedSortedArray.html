@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/twoSum.svelte-902babb8.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/minInRotatedSortedArray.svelte-f8ad2123.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 1. Two Sum">
-	<title>1. Two Sum</title></head>
+	<meta name="description" content="Leetcode Blind 75 153. Find Minimum in Rotated Sorted Array">
+	<title>153. Find Minimum in Rotated Sorted Array</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,57 +49,52 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">1. Two Sum</span></h2>
+	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">153. Find Minimum in Rotated Sorted Array</span></h2>
 </main>
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">19th June 2022 ~ Dion Pinto</h5></div>
+			<h5 style="font-style: italic;">14th July 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark svelte-r754dw"><div class="svelte-r754dw"><a href="#description" class="svelte-r754dw">Description</a></div>
-			<div class="svelte-r754dw"><a href="#code1" class="svelte-r754dw">Code -&gt; Brute Force</a></div>
-			<div class="svelte-r754dw"><a href="#code2" class="svelte-r754dw">Code -&gt; Hash</a></div></div>
+			<div class="svelte-r754dw"><a href="#code" class="svelte-r754dw">Code</a></div></div>
 
 		<section id="description" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Description</span></h4>
 </main>
 
-			<p class="svelte-r754dw">Given an array of integers nums and an integer target, return indices of the two numbers
-				such that they add up to target. You may assume that each input would have exactly one
-				solution, and you may not use the same element twice. You can return the answer in any
-				order.
+			<p class="svelte-r754dw">Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For
+				example, the array nums = [0,1,2,4,5,6,7] might become: [4,5,6,7,0,1,2] if it was rotated 4
+				times. [0,1,2,4,5,6,7] if it was rotated 7 times. Notice that rotating an array [a[0], a[1],
+				a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].
+				Given the sorted rotated array nums of unique elements, return the minimum element of this
+				array. You must write an algorithm that runs in O(log n) time.
 
-				<a id="link" href="https://leetcode.com/problems/two-sum/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
+				<a id="link" href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
 
-		<section id="code1" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python) -&gt; Brute Force</span></h4>
+		<section id="code" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
 </main>
 
 			<pre id="block" class="svelte-r754dw"><code>
 				
     class Solution:
-        def twoSum(self, nums: List[int], target: int) -&gt; List[int]:
-            for i in range(len(nums)-1):
-                for j in range(i+1,len(nums)):
-                    if(nums[i]+nums[j]==target):
-                        return [i,j]
-							
-			</code></pre>
-			<p class="svelte-r754dw">Time Complexity =&gt; o(n<sup>2</sup>)</p>
-			<p class="svelte-r754dw">Space Complexity =&gt; o(1)</p></section>
-
-		<section id="code2" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python) -&gt; Hash</span></h4>
-</main>
-
-			<pre id="block" class="svelte-r754dw"><code>
-				
-    class Solution:
-        def twoSum(self, nums: List[int], target: int) -&gt; List[int]:
-            d={}
-            for i in range(len(nums)):
-                if((target-nums[i]) in d):
-                    return [i,d[target-nums[i]]]
+        def findMin(self, nums: List[int]) -&gt; int:
+            res=nums[0]
+            l,r=0,len(nums)-1
+            
+            while(l&lt;=r):
+                if(nums[l]&lt;=nums[r]): 
+                    res= min(res,nums[l])
+                
+                mid= (l+r)//2
+                res=min(nums[mid],res)
+                
+                if(nums[mid]&gt;=nums[l]):
+                    l=mid+1
                 else:
-                    d[nums[i]]=i
+                    r=mid-1
+            
+            return res
 							
 			</code></pre>
-			<p class="svelte-r754dw">Time Complexity =&gt; o(n)</p>
-			<p class="svelte-r754dw">Space Complexity =&gt; o(n)</p></section>
+			<p class="svelte-r754dw">Time Complexity =&gt; o(log n)</p>
+			<p class="svelte-r754dw">Space Complexity =&gt; o(1)</p></section>
 		<a type="button" class="nes-btn is-primary svelte-r754dw" href="/dionpinto/blind75">Back</a></main>
 
 	<footer class="svelte-r754dw"><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
@@ -109,10 +104,10 @@
 </main>
 
 
-		<script type="module" data-hydrate="1ch1ubs">
+		<script type="module" data-hydrate="1aaso2m">
 		import { start } from "/dionpinto/_app/start-c52e4fcd.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ch1ubs"]').parentNode,
+			target: document.querySelector('[data-hydrate="1aaso2m"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -123,10 +118,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/twoSum.svelte-902babb8.js")
+						import("/dionpinto/_app/pages/blind75/minInRotatedSortedArray.svelte-f8ad2123.js")
 				],
 				params: {},
-				routeId: "blind75/twoSum"
+				routeId: "blind75/minInRotatedSortedArray"
 			}
 		});
 	</script></div>
