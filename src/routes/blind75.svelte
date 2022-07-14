@@ -28,6 +28,12 @@
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Arrays</i>
 			</h3>
 			<Article
+				articleTitle={'153. Find Minimum in Rotated Sorted Array'}
+				articleLink={`${base}/blind75/minInRotatedSortedArray`}
+				articleDate={'14/7/22'}
+				status={true}
+			/>
+			<Article
 				articleTitle={'15. 3Sum'}
 				articleLink={`${base}/blind75/threeSum`}
 				articleDate={'22/6/22'}
