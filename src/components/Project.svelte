@@ -24,20 +24,7 @@
 
 <main>
 	<div id="project" class="nes-container is-dark with-title">
-		{#if typeBadge === 'Entropy'}
-			<p class="title">
-				{projectName}
-				<a
-					href="https://ml-wasm.github.io/entropy/"
-					target="_blank"
-					class="nes-badge is-splited"
-					style="font-size: x-small; font-weight:bold"
-				>
-					<span class="is-error">FYP</span>
-					<span class="is-primary">&#9741;</span></a
-				>
-			</p>
-		{:else if typeBadge === 'Plot'}
+		{#if typeBadge === 'FYP'}
 			<p class="title">
 				{projectName}
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
@@ -49,6 +36,13 @@
 				{projectName}
 				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
 					<span class="is-warning">Internship</span>
+				</span>
+			</p>
+		{:else if typeBadge === 'Publication'}
+			<p class="title">
+				{projectName}
+				<span class="nes-badge" style="font-size: x-small; font-weight:bold">
+					<span class="is-warning">Publication</span>
 				</span>
 			</p>
 		{:else}
@@ -65,7 +59,7 @@
 		<p>{projectDescription}</p>
 
 		<div id="project_footer">
-			{#if typeBadge === 'Internship'}
+			{#if typeBadge === 'Internship' || typeBadge === 'Publication'}
 				<a href={gitLink} target="_blank"
 					><img
 						style="background-color: white;"

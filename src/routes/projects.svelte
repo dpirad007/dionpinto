@@ -11,14 +11,14 @@
 			projectDescription: 'Fast, Series and DataFrames powered by WebAssembly and Rust.',
 			imageSrc: 'entropy.png',
 			gitLink: 'https://github.com/dpirad007/Entropy',
-			typeBadge: 'Entropy'
+			typeBadge: 'FYP'
 		},
 		{
 			projectName: 'Plot',
 			projectDescription: 'Plotting powered by WebAssembly and Rust.',
 			imageSrc: 'plot.png',
 			gitLink: 'https://github.com/dpirad007/Plot',
-			typeBadge: 'Plot'
+			typeBadge: 'FYP'
 		},
 		{
 			projectName: 'Meditatree',
@@ -26,6 +26,13 @@
 			imageSrc: 'meditatree.png',
 			gitLink: 'https://github.com/dpirad007/meditatree',
 			typeBadge: 'None'
+		},
+		{
+			projectName: 'Research Paper',
+			projectDescription: 'Series, DataFrames and Plotting powered by WebAssembly and Rust.',
+			imageSrc: 'publication.jpeg',
+			gitLink: 'https://link.springer.com/chapter/10.1007/978-981-19-0898-9_23',
+			typeBadge: 'Publication'
 		},
 		{
 			projectName: 'Botonomics',
