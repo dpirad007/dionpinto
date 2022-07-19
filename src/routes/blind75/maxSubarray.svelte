@@ -23,7 +23,7 @@
 		<div id="title">
 			<Title type={2} {title} />
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">19th June 2022 ~ Dion Pinto</h5>
+			<h5 style="font-style: italic;">19th July 2022 ~ Dion Pinto</h5>
 		</div>
 		<div id="index" class="nes-container is-rounded is-dark">
 			<div><a href="#description">Description</a></div>
