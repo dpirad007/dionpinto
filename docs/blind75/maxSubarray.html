@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/containsDuplicate.svelte-674024a5.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/maxSubarray.svelte-aa547de0.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 217. Contains Duplicate">
-	<title>217. Contains Duplicate</title></head>
+	<meta name="description" content="Leetcode Blind 75 53. Maximum Subarray">
+	<title>53. Maximum Subarray</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,20 +49,20 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">217. Contains Duplicate</span></h2>
+	<main class="container svelte-r754dw"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">53. Maximum Subarray</span></h2>
 </main>
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">22th June 2022 ~ Dion Pinto</h5></div>
+			<h5 style="font-style: italic;">19th June 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark svelte-r754dw"><div class="svelte-r754dw"><a href="#description" class="svelte-r754dw">Description</a></div>
 			<div class="svelte-r754dw"><a href="#code" class="svelte-r754dw">Code</a></div></div>
 
 		<section id="description" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Description</span></h4>
 </main>
 
-			<p class="svelte-r754dw">Given an integer array nums, return true if any value appears at least twice in the array,
-				and return false if every element is distinct.
+			<p class="svelte-r754dw">Given an integer array nums, find the contiguous subarray (containing at least one number)
+				which has the largest sum and return its sum. A subarray is a contiguous part of an array.
 
-				<a id="link" href="https://leetcode.com/problems/contains-duplicate/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
+				<a id="link" href="https://leetcode.com/problems/maximum-subarray/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
 
 		<section id="code" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
 </main>
@@ -70,19 +70,20 @@
 			<pre id="block" class="svelte-r754dw"><code>
 				
     class Solution:
-        def containsDuplicate(self, nums: List[int]) -&gt; bool:
-            d={}
-            for i in nums:
-                if(i in d):
-                    d[i]+=1
-                    if(d[i]&gt;1):return True   
-                else:
-                    d[i]=1
-            return False 
+        def maxSubArray(self, nums: List[int]) -&gt; int:
+            maxval = nums[0]
+            curSum=0
+            
+            for i in range(len(nums)):
+                if(curSum&lt;0):
+                    curSum=0
+                curSum+=nums[i]
+                maxval = max(curSum,maxval)
+            return maxval
 							
 			</code></pre>
 			<p class="svelte-r754dw">Time Complexity =&gt; o(n)</p>
-			<p class="svelte-r754dw">Space Complexity =&gt; o(n)</p></section>
+			<p class="svelte-r754dw">Space Complexity =&gt; o(1)</p></section>
 		<a type="button" class="nes-btn is-primary svelte-r754dw" href="/dionpinto/blind75">Back</a></main>
 
 	<footer class="svelte-r754dw"><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
@@ -92,10 +93,10 @@
 </main>
 
 
-		<script type="module" data-hydrate="e5hqg1">
+		<script type="module" data-hydrate="igtn1c">
 		import { start } from "/dionpinto/_app/start-4812a52d.js";
 		start({
-			target: document.querySelector('[data-hydrate="e5hqg1"]').parentNode,
+			target: document.querySelector('[data-hydrate="igtn1c"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -106,10 +107,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/containsDuplicate.svelte-674024a5.js")
+						import("/dionpinto/_app/pages/blind75/maxSubarray.svelte-aa547de0.js")
 				],
 				params: {},
-				routeId: "blind75/containsDuplicate"
+				routeId: "blind75/maxSubarray"
 			}
 		});
 	</script></div>
