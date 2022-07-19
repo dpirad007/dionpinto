@@ -5,14 +5,14 @@
 		<link rel="icon" href="/dionpinto/logo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/blind75/bestTimeToBuyAndSell1.svelte-cf0b23ef.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/pages/blind75/containerWithMostWater.svelte-7c10390c.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
-	<link rel="modulepreload" href="/dionpinto/_app/start-b1a5db42.js">
+	<link rel="modulepreload" href="/dionpinto/_app/start-d4c3f010.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/maxSubarray.svelte-a5173667.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/maxSubarray.svelte-c1acd374.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -54,6 +54,7 @@
 			<h4>Leetcode Blind 75</h4>
 			<h5 style="font-style: italic;">19th July 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark svelte-r754dw"><div class="svelte-r754dw"><a href="#description" class="svelte-r754dw">Description</a></div>
+			<div class="svelte-r754dw"><a href="#explanation" class="svelte-r754dw">Explanation</a></div>
 			<div class="svelte-r754dw"><a href="#code" class="svelte-r754dw">Code</a></div></div>
 
 		<section id="description" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Description</span></h4>
@@ -63,6 +64,54 @@
 				which has the largest sum and return its sum. A subarray is a contiguous part of an array.
 
 				<a id="link" href="https://leetcode.com/problems/maximum-subarray/" target="_blank" class="svelte-r754dw">(Problem)</a></p></section>
+
+		<section id="explanation" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Explanation</span></h4>
+</main>
+
+			<p class="svelte-r754dw">We can find the max subarray by checking all possible subarrays of the array, in python this
+				can be done quite easily via the slicing operation.
+			</p>
+			<pre id="block" class="svelte-r754dw"><code>
+				
+	class Solution:
+		def maxSubArray(self, nums: List[int]) -&gt; int:
+			maxval=nums[0]
+			for i in range(len(nums)-2):
+				for j in range(i+1,len(nums)-1):
+					val = sum(nums[i:j])
+					maxval = max(val,maxval)
+			return maxval
+							
+			</code></pre>
+
+			<p class="svelte-r754dw">However the time complexity of such an approach is very poor O(n<sup>3</sup>). This is
+				beacuse even the sum() function take O(n) to compute.
+			</p>
+			<p class="svelte-r754dw">A better approach is to always check the current sum of the array.</p>
+			<pre id="block" class="svelte-r754dw"><code>
+				
+	[-2,1,-3,4,-1,2,1,-5,4]
+
+	initially -2 -&gt; -1 -&gt; -4 ...
+							
+			</code></pre>
+			<p class="svelte-r754dw">We can notice that -2 did not help us at all, all it did was lower the value, hence whenever
+				we encounter a negative current sum we should set to 0.
+			</p>
+			<p class="svelte-r754dw">We can then just iterate over the array and add the value present in ith position, followed
+				by checking the max(current sum, maximun value found so far).
+			</p>
+			<pre id="block" class="svelte-r754dw"><code>
+				
+	[-2,-3,-1,-5]
+							
+			</code></pre>
+			<p class="svelte-r754dw">Suppose we get the above scenario where all the numbers are negative, then we just need to
+				get the highest value. This can be achieved by initially setting the maxval as the first
+				number of the array, after which the current sum will only decrease -&gt; it will set to 0,
+				then it will add the negative value in ith position -&gt; compare itself to maxval and the
+				higher number will be chosen.
+			</p></section>
 
 		<section id="code" class="svelte-r754dw"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
 </main>
@@ -93,10 +142,10 @@
 </main>
 
 
-		<script type="module" data-hydrate="t33ybi">
-		import { start } from "/dionpinto/_app/start-b1a5db42.js";
+		<script type="module" data-hydrate="pnywug">
+		import { start } from "/dionpinto/_app/start-d4c3f010.js";
 		start({
-			target: document.querySelector('[data-hydrate="t33ybi"]').parentNode,
+			target: document.querySelector('[data-hydrate="pnywug"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -107,7 +156,7 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/maxSubarray.svelte-a5173667.js")
+						import("/dionpinto/_app/pages/blind75/maxSubarray.svelte-c1acd374.js")
 				],
 				params: {},
 				routeId: "blind75/maxSubarray"
