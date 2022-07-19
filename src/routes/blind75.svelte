@@ -28,6 +28,12 @@
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Arrays</i>
 			</h3>
 			<Article
+				articleTitle={'53. Maximum Subarray'}
+				articleLink={`${base}/blind75/maxSubarray`}
+				articleDate={'19/7/22'}
+				status={true}
+			/>
+			<Article
 				articleTitle={'153. Find Minimum in Rotated Sorted Array'}
 				articleLink={`${base}/blind75/minInRotatedSortedArray`}
 				articleDate={'14/7/22'}
