@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/dionpinto/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/blog-d3b97be1.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
+	<link rel="modulepreload" href="/dionpinto/_app/start-4edf6677.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
+	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/chip8.svelte-33dd80b9.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
+	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
+		<!-- latest -->
+		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-2CX0XWQ7ZH');
+		</script>
+	</head>
+	<body style="background-color: black">
+		<div>
+
+
+<head><meta name="author" content="Dion Pinto">
+	<meta name="description" content="Chip 8 Emulator with rust">
+	<title>Chip 8 Emulator with rust</title></head>
+
+<ul class="_toastContainer svelte-yh90az">
+</ul>
+<main class="main"><header><main><nav id="navbar"><div id="container" class="svelte-1ym1ow9"><a href="/dionpinto/" class="nes-badge"><span class="is-dark">Home</span></a>
+			<a href="/dionpinto/projects" class="nes-badge"><span class="is-dark">Projects</span></a>
+
+			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
+</main></header>
+
+	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">Chip 8</span></h2>
+</main>
+			<h4>Chip 8 Emulator with rust</h4>
+			<h5 style="font-style: italic;">2th Aug 2022 ~ Dion Pinto</h5></div>
+		<div id="index" class="nes-container is-rounded is-dark"><div><a href="#introduction">Introduction</a></div>
+			<div><a href="#demo">Demo</a></div></div>
+
+		<section id="introduction"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
+</main>
+
+			<p>While wandering through the depths of stackoverflow I often found people suggesting the best
+				way to get good at a particular programming language is to implement a chip 8 emulator with
+				that language. So I began the process of researching what a chip 8 emulator was and fell
+				into a rabbit hole of emulators, I decided to jump into the ocean of emulator design and
+				quickly realized I was going to sink.
+			</p>
+			<p>Opcodes, timers .....WHATT!!!, I didnt think I would ever need to hear the word opcode after
+				my horrible time with 8085 in college, where I basically left off more confused than before
+				taking the course.But the only reason that was the case was because we were only thought
+				about the microprocessor in a theoretical nature, and the labs were basically an exercise in
+				rote learning opcodes in an order to solve the question.
+			</p>
+
+			<p>Im currently on a quest to gain a deeper understanding of computers and thought a good place
+				to start would be to build an emulator and gain an insight into how that process works.
+				Ofcourse me being a beginner I decided to follow this excellent book by <a id="link" href="https://github.com/aquova/chip8-book/releases" target="_blank" alt="Chip 8 book">(aquova)</a></p>
+
+			<p>You can find my git repository here <a id="link" href="https://github.com/dpirad007/Chip-8" target="_blank" alt="Dion Pinto Git repo">(Repository Link)</a>
+				Its pretty similar to the one by aquova, with the addition of comments to understand certain
+				shift and bit manipulation operations.
+			</p></section>
+
+		<section id="demo"><main><h4 style="color: #209cee;"><span>Demo</span></h4>
+</main>
+
+			<p>Here are some games on the emulator. I downloaded the roms <a id="link" href="https://www.zophar.net/pdroms/chip8/chip-8-games-pack.html" target="_blank" alt="Chip 8 roms">(from here)</a></p>
+
+			<img id="image" src="chip8/pong.png" alt="upptime status page">
+			<img id="image" src="chip8/tetris.png" alt="upptime status page">
+			<img id="image" src="chip8/space.png" alt="upptime status page"></section>
+
+		<a id="back-btn" type="button" class="nes-btn is-primary" href="/dionpinto/blog">Back</a></main>
+
+	<footer><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
+		<div class="svelte-xw0615"><i class="nes-icon gmail"></i></div>
+		<a id="linkedin icon" href="https://www.linkedin.com/in/dion-pinto-9a7269178/" target="_blank" class="svelte-xw0615"><i class="nes-icon linkedin"></i></a></section>
+</main></footer></main>
+
+
+		<script type="module" data-hydrate="1iv2fur">
+		import { start } from "/dionpinto/_app/start-4edf6677.js";
+		start({
+			target: document.querySelector('[data-hydrate="1iv2fur"]').parentNode,
+			paths: {"base":"/dionpinto","assets":"/dionpinto"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
+						import("/dionpinto/_app/pages/chip8.svelte-33dd80b9.js")
+				],
+				params: {},
+				routeId: "chip8"
+			}
+		});
+	</script></div>
+	</body>
+</html>
