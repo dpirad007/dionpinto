@@ -52,14 +52,14 @@
 		<div id="blog_list">
 			<h3>
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;"
-					>Projects (In progress)</i
+					>Projects</i
 				>
 			</h3>
 			<Article
 				articleTitle={'Chip 8'}
 				articleLink={`${base}/chip8`}
-				articleDate={'Coming Soon'}
-				status={false}
+				articleDate={'2/8/22'}
+				status={true}
 			/>
 			<Article
 				articleTitle={'Rusty Deep Learning'}

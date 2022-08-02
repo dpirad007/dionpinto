@@ -75,9 +75,17 @@
 			<Title type={5} title="Demo" />
 
 			<p>
-				I am assuming that you already have created a SvelteKit application and a git repo for that
-				application. If not, create them now.
+				Here are some games on the emulator. I downloaded the roms <a
+					id="link"
+					href="https://www.zophar.net/pdroms/chip8/chip-8-games-pack.html"
+					target="_blank"
+					alt="Chip 8 roms">(from here)</a
+				>
 			</p>
+
+			<img id="image" src="chip8/pong.png" alt="upptime status page" />
+			<img id="image" src="chip8/tetris.png" alt="upptime status page" />
+			<img id="image" src="chip8/space.png" alt="upptime status page" />
 		</section>
 
 		<a id="back-btn" type="button" class="nes-btn is-primary" href={`${base}/blog`}>Back</a>

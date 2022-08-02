@@ -2,6 +2,7 @@
 	color: inherit;
 }
 #image {
+	margin: 1rem;
 	max-width: 100%;
 }
 
