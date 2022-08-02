@@ -11,7 +11,7 @@
 		{#if curPage === 'Blind75'}
 			<a id="bc-link" href="{base}/blog"> Blog </a>
 			>
-			<a id="bc-link" href="{base}/blind75"> Blind75 </a>
+			<a id="bc-link" href="{base}/blind75" style="color:#209cee;"> Blind75 </a>
 		{/if}
 	</div>
 </main>

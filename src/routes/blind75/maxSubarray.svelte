@@ -6,6 +6,8 @@
 	import Footer from '../../components/Footer.svelte';
 	import Title from '../../components/Title.svelte';
 
+	import '../../utils/blind75.css';
+
 	const title = '53. Maximum Subarray';
 </script>
 
@@ -126,74 +128,3 @@
 		<Footer />
 	</footer>
 </main>
-
-<style>
-	#link {
-		color: #209cee;
-	}
-
-	#block {
-		border: 2px solid white;
-		font-size: small;
-	}
-
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-
-	section {
-		margin-bottom: 50px;
-		display: grid;
-	}
-
-	p {
-		font-size: 15px;
-		text-align: justify;
-		hyphens: auto;
-		line-height: 1.5rem;
-	}
-
-	#index {
-		margin: 1rem;
-	}
-
-	#index div {
-		margin: 1rem;
-	}
-
-	.main {
-		padding: 1rem;
-		display: grid;
-		grid-template-areas:
-			'head'
-			'main'
-			'foot';
-		grid-template-rows: 50px 1fr 50px;
-	}
-	header {
-		grid-area: head;
-	}
-
-	.container {
-		grid-area: main;
-		color: white;
-	}
-
-	footer {
-		grid-area: foot;
-	}
-
-	@media only screen and (max-width: 740px) {
-		.main {
-			padding: 1rem;
-			display: grid;
-			grid-template-areas:
-				'head'
-				'main'
-				'foot';
-			grid-template-rows: 130px 1fr 70px;
-			grid-template-columns: 100%;
-		}
-	}
-</style>

@@ -47,21 +47,20 @@
 				articleDate={'9/5/22'}
 				status={true}
 			/>
-
-			<Article
-				articleTitle={'Chip 8'}
-				articleLink={'#blog_list'}
-				articleDate={'Coming Soon'}
-				status={false}
-			/>
 		</div>
 
 		<div id="blog_list">
 			<h3>
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;"
-					>Project Ideas</i
+					>Projects (In progress)</i
 				>
 			</h3>
+			<Article
+				articleTitle={'Chip 8'}
+				articleLink={`${base}/chip8`}
+				articleDate={'Coming Soon'}
+				status={false}
+			/>
 			<Article
 				articleTitle={'Rusty Deep Learning'}
 				articleLink={'#blog_list'}
