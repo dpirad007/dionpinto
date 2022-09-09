@@ -82,6 +82,18 @@
 				status={true}
 			/>
 		</div>
+		<div id="blog_list">
+			<h3>
+				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Trees</i>
+			</h3>
+			<Article
+				articleTitle={'104. Maximum Depth of Binary Tree'}
+				articleLink={`${base}/blind75/maxDepthOfBinaryTree`}
+				articleDate={'9/9/22'}
+				status={true}
+			/>
+			
+		</div>
 	</main>
 
 	<footer>
