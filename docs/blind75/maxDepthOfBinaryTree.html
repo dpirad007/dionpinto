@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/minInRotatedSortedArray.svelte-08892b60.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/maxDepthOfBinaryTree.svelte-836b48ab.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 153. Find Minimum in Rotated Sorted Array">
-	<title>153. Find Minimum in Rotated Sorted Array</title></head>
+	<meta name="description" content="Leetcode Blind 75 104. Maximum Depth of Binary Tree">
+	<title>104. Maximum Depth of Binary Tree</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,52 +49,81 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">153. Find Minimum in Rotated Sorted Array</span></h2>
+	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">104. Maximum Depth of Binary Tree</span></h2>
 </main>
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">14th July 2022 ~ Dion Pinto</h5></div>
+			<h5 style="font-style: italic;">9th Sept 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark"><div><a href="#description">Description</a></div>
 			<div><a href="#code">Code</a></div></div>
 
 		<section id="description"><main><h4 style="color: #209cee;"><span>Description</span></h4>
 </main>
 
-			<p>Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For
-				example, the array nums = [0,1,2,4,5,6,7] might become: [4,5,6,7,0,1,2] if it was rotated 4
-				times. [0,1,2,4,5,6,7] if it was rotated 7 times. Notice that rotating an array [a[0], a[1],
-				a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].
-				Given the sorted rotated array nums of unique elements, return the minimum element of this
-				array. You must write an algorithm that runs in O(log n) time.
+			<p>Given the root of a binary tree, return its maximum depth.
+                A binary tree&#39;s maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
-				<a id="link" href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">(Problem)</a></p></section>
+				<a id="link" href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">(Problem)</a></p></section>
 
-		<section id="code"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
+		<section id="code"><main><h4 style="color: #209cee;"><span>Code</span></h4>
 </main>
 
+			<p>We can find the max subarray by 2 common methods DFS, BFS.
+                Following is the DFS (recursive) approach.
+			</p>
 			<pre id="block"><code>
 				
+    # Definition for a binary tree node.
+    # class TreeNode:
+    #     def __init__(self, val=0, left=None, right=None):
+    #         self.val = val
+    #         self.left = left
+    #         self.right = right
     class Solution:
-        def findMin(self, nums: List[int]) -&gt; int:
-            res=nums[0]
-            l,r=0,len(nums)-1
-            
-            while(l&lt;=r):
-                if(nums[l]&lt;=nums[r]): 
-                    res= min(res,nums[l])
+        def maxDepth(self, root: Optional[TreeNode]) -&gt; int:
+                if not root:
+                    return 0
                 
-                mid= (l+r)//2
-                res=min(nums[mid],res)
-                
-                if(nums[mid]&gt;=nums[l]):
-                    l=mid+1
-                else:
-                    r=mid-1
-            
-            return res
+                return(1 + max(self.maxDepth(root.left),self.maxDepth(root.right)))
 							
 			</code></pre>
-			<p>Time Complexity =&gt; o(log n)</p>
-			<p>Space Complexity =&gt; o(1)</p></section>
+
+			<p>BFS (queue) approach.</p>
+			<pre id="block"><code>
+				
+    from collections import deque
+    # Definition for a binary tree node.
+    # class TreeNode:
+    #     def __init__(self, val=0, left=None, right=None):
+    #         self.val = val
+    #         self.left = left
+    #         self.right = right
+    class Solution:
+        def maxDepth(self, root: Optional[TreeNode]) -&gt; int:
+            if not root:
+                return 0
+            level=0
+            q = deque([root])
+            
+            while q:
+                
+                for i in range(len(q)):
+                    node = q.popleft()
+                
+                    if node:
+                        if node.left:
+                            q.append(node.left)
+                        if node.right:
+                            q.append(node.right)
+                        
+                level+=1
+            return level
+							
+			</code></pre>
+			
+            <p>Time Complexity =&gt; o(n)</p>
+			<p>Space Complexity =&gt; o(n) (height of tree, since tree is not balanced its o(n))</p></section>
+
+
 		<a type="button" class="nes-btn is-primary" href="/dionpinto/blind75">Back</a></main>
 
 	<footer><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
@@ -103,10 +132,10 @@
 </main></footer></main>
 
 
-		<script type="module" data-hydrate="1m3nvy8">
+		<script type="module" data-hydrate="1ysh1wo">
 		import { start } from "/dionpinto/_app/start-81a4a137.js";
 		start({
-			target: document.querySelector('[data-hydrate="1m3nvy8"]').parentNode,
+			target: document.querySelector('[data-hydrate="1ysh1wo"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -117,10 +146,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/minInRotatedSortedArray.svelte-08892b60.js")
+						import("/dionpinto/_app/pages/blind75/maxDepthOfBinaryTree.svelte-836b48ab.js")
 				],
 				params: {},
-				routeId: "blind75/minInRotatedSortedArray"
+				routeId: "blind75/maxDepthOfBinaryTree"
 			}
 		});
 	</script></div>
