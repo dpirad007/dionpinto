@@ -92,6 +92,12 @@
 				articleDate={'9/9/22'}
 				status={true}
 			/>
+			<Article
+				articleTitle={'226. Invert Binary Tree'}
+				articleLink={`${base}/blind75/invertBinaryTree`}
+				articleDate={'12/9/22'}
+				status={true}
+			/>
 			
 		</div>
 	</main>
