@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/containerWithMostWater.svelte-64696f7e.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/binaryTreeLevelOrderTraversal.svelte-6bb5a468.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 11. Container with most water">
-	<title>11. Container with most water</title></head>
+	<meta name="description" content="Leetcode Blind 75 102. Binary Tree Level Order Traversal">
+	<title>102. Binary Tree Level Order Traversal</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,51 +49,64 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">11.Container with most water</span></h2>
+	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">102. Binary Tree Level Order Traversal</span></h2>
 </main>
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">17th June 2022 ~ Dion Pinto</h5></div>
+			<h5 style="font-style: italic;">12th Sept 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark"><div><a href="#description">Description</a></div>
 			<div><a href="#code">Code</a></div></div>
 
 		<section id="description"><main><h4 style="color: #209cee;"><span>Description</span></h4>
 </main>
 
-			<p>You are given an integer array height of length n. There are n vertical lines drawn such
-				that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that
-				together with the x-axis form a container, such that the container contains the most water.
-				Return the maximum amount of water a container can store. Notice that you may not slant the
-				container.
+			<p>Given the root of a binary tree, return the level order traversal of its nodes&#39; values. (i.e., from left to right, level by level).
 
-				<a id="link" href="https://leetcode.com/problems/container-with-most-water/" target="_blank">(Problem)</a></p></section>
+				<a id="link" href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">(Problem)</a></p></section>
 
-		<section id="code"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
+		<section id="code"><main><h4 style="color: #209cee;"><span>Code</span></h4>
 </main>
+
 
 			<pre id="block"><code>
 				
-    import math
+
+    from collections import deque
+    # Definition for a binary tree node.
+    # class TreeNode:
+    #     def __init__(self, val=0, left=None, right=None):
+    #         self.val = val
+    #         self.left = left
+    #         self.right = right
     class Solution:
-        def maxArea(self, height: List[int]) -&gt; int:
-            m=-math.inf
-            l,r = 0,len(height)-1
-        
-            while(l&lt;r):
-
-                area = (r-l)*min(height[l],height[r])
-                m=max(m,area)
-
-                if(height[l] &lt; height[r]):
-                    l+=1
-                elif(height[l] &gt; height[r]):
-                    r-=1
-                else:
-                    r-=1
-            return m
+        def levelOrder(self, root: Optional[TreeNode]) -&gt; List[List[int]]:
+            if not root:
+                return []
+            
+            q = deque([root])
+            sol=[[root.val]]
+            
+            while q:
+                a=[]
+                for i in range(len(q)):
+                    
+                    node = q.popleft()
+                    
+                    if node.left:
+                        q.append(node.left)
+                        a.append(node.left.val)
+                    if node.right:
+                        q.append(node.right)
+                        a.append(node.right.val)
+                if len(a)!=0:        
+                    sol.append(a)
+            return sol
 							
 			</code></pre>
-			<p>Time Complexity =&gt; o(n)</p>
-			<p>Space Complexity =&gt; o(1)</p></section>
+			
+            <p>Time Complexity =&gt; o(n)</p>
+			<p>Space Complexity =&gt; o(n) (height of tree)</p></section>
+
+
 		<a type="button" class="nes-btn is-primary" href="/dionpinto/blind75">Back</a></main>
 
 	<footer><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
@@ -102,10 +115,10 @@
 </main></footer></main>
 
 
-		<script type="module" data-hydrate="1xfasye">
+		<script type="module" data-hydrate="1k8fh1t">
 		import { start } from "/dionpinto/_app/start-deb96657.js";
 		start({
-			target: document.querySelector('[data-hydrate="1xfasye"]').parentNode,
+			target: document.querySelector('[data-hydrate="1k8fh1t"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -116,10 +129,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/containerWithMostWater.svelte-64696f7e.js")
+						import("/dionpinto/_app/pages/blind75/binaryTreeLevelOrderTraversal.svelte-6bb5a468.js")
 				],
 				params: {},
-				routeId: "blind75/containerWithMostWater"
+				routeId: "blind75/binaryTreeLevelOrderTraversal"
 			}
 		});
 	</script></div>
