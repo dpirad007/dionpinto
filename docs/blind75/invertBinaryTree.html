@@ -12,7 +12,7 @@
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/containsDuplicate.svelte-22f9d71b.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/invertBinaryTree.svelte-60edcecd.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 217. Contains Duplicate">
-	<title>217. Contains Duplicate</title></head>
+	<meta name="description" content="Leetcode Blind 75 226. Invert Binary Tree">
+	<title>226. Invert Binary Tree</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,40 +49,53 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">217. Contains Duplicate</span></h2>
+	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">226. Invert Binary Tree</span></h2>
 </main>
 			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">22th June 2022 ~ Dion Pinto</h5></div>
+			<h5 style="font-style: italic;">12th Sept 2022 ~ Dion Pinto</h5></div>
 		<div id="index" class="nes-container is-rounded is-dark"><div><a href="#description">Description</a></div>
 			<div><a href="#code">Code</a></div></div>
 
 		<section id="description"><main><h4 style="color: #209cee;"><span>Description</span></h4>
 </main>
 
-			<p>Given an integer array nums, return true if any value appears at least twice in the array,
-				and return false if every element is distinct.
+			<p>Given the root of a binary tree, invert the tree, and return its root.
 
-				<a id="link" href="https://leetcode.com/problems/contains-duplicate/" target="_blank">(Problem)</a></p></section>
+				<a id="link" href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">(Problem)</a></p></section>
 
-		<section id="code"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
+		<section id="code"><main><h4 style="color: #209cee;"><span>Code</span></h4>
 </main>
+
 
 			<pre id="block"><code>
 				
+    # Definition for a binary tree node.
+    # class TreeNode:
+    #     def __init__(self, val=0, left=None, right=None):
+    #         self.val = val
+    #         self.left = left
+    #         self.right = right
     class Solution:
-        def containsDuplicate(self, nums: List[int]) -&gt; bool:
-            d={}
-            for i in nums:
-                if(i in d):
-                    d[i]+=1
-                    if(d[i]&gt;1):return True   
-                else:
-                    d[i]=1
-            return False 
+        def invertTree(self, root: Optional[TreeNode]) -&gt; Optional[TreeNode]:
+            
+            if not root:
+                return 
+            
+            temp = root.left
+            root.left=root.right
+            root.right=temp
+            
+            self.invertTree(root.left)
+            self.invertTree(root.right)
+
+            return root
 							
 			</code></pre>
-			<p>Time Complexity =&gt; o(n)</p>
-			<p>Space Complexity =&gt; o(n)</p></section>
+			
+            <p>Time Complexity =&gt; o(n)</p>
+			<p>Space Complexity =&gt; o(n) (height of tree)</p></section>
+
+
 		<a type="button" class="nes-btn is-primary" href="/dionpinto/blind75">Back</a></main>
 
 	<footer><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
@@ -91,10 +104,10 @@
 </main></footer></main>
 
 
-		<script type="module" data-hydrate="it7dhb">
+		<script type="module" data-hydrate="1nvi1v">
 		import { start } from "/dionpinto/_app/start-4cd5cbbb.js";
 		start({
-			target: document.querySelector('[data-hydrate="it7dhb"]').parentNode,
+			target: document.querySelector('[data-hydrate="1nvi1v"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -105,10 +118,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/containsDuplicate.svelte-22f9d71b.js")
+						import("/dionpinto/_app/pages/blind75/invertBinaryTree.svelte-60edcecd.js")
 				],
 				params: {},
-				routeId: "blind75/containsDuplicate"
+				routeId: "blind75/invertBinaryTree"
 			}
 		});
 	</script></div>
