@@ -86,12 +86,14 @@
 			<h3>
 				<span style="color: #209cee;"># </span><i style="border-bottom: 2px solid white;">Trees</i>
 			</h3>
+
 			<Article
-				articleTitle={'104. Maximum Depth of Binary Tree'}
-				articleLink={`${base}/blind75/maxDepthOfBinaryTree`}
-				articleDate={'9/9/22'}
+				articleTitle={'102. Binary Tree Level Order Traversal'}
+				articleLink={`${base}/blind75/binaryTreeLevelOrderTraversal`}
+				articleDate={'12/9/22'}
 				status={true}
 			/>
+
 			<Article
 				articleTitle={'226. Invert Binary Tree'}
 				articleLink={`${base}/blind75/invertBinaryTree`}
@@ -100,12 +102,11 @@
 			/>
 
 			<Article
-			articleTitle={'102. Binary Tree Level Order Traversal'}
-			articleLink={`${base}/blind75/binaryTreeLevelOrderTraversal`}
-			articleDate={'12/9/22'}
-			status={true}
-		/>
-			
+				articleTitle={'104. Maximum Depth of Binary Tree'}
+				articleLink={`${base}/blind75/maxDepthOfBinaryTree`}
+				articleDate={'9/9/22'}
+				status={true}
+			/>
 		</div>
 	</main>
 
