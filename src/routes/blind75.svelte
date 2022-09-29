@@ -88,6 +88,13 @@
 			</h3>
 
 			<Article
+				articleTitle={'235. Lowest Common Ancestor of a Binary Search Tree'}
+				articleLink={`${base}/blind75/lowestCommonAnsectorBST`}
+				articleDate={'29/9/22'}
+				status={true}
+			/>
+
+			<Article
 				articleTitle={'102. Binary Tree Level Order Traversal'}
 				articleLink={`${base}/blind75/binaryTreeLevelOrderTraversal`}
 				articleDate={'12/9/22'}
