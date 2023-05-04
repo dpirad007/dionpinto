@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-e3211293.js",
+    "file": "start-007e6693.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -27,6 +27,7 @@
       "src/routes/blog.svelte",
       "src/routes/chip8.svelte",
       "src/routes/entropy.svelte",
+      "src/routes/formula1.svelte",
       "src/routes/index.svelte",
       "src/routes/projects.svelte",
       "src/routes/sveltekitPublish.svelte",
@@ -263,7 +264,7 @@
     ]
   },
   "src/routes/blog.svelte": {
-    "file": "pages/blog.svelte-f26f4e6d.js",
+    "file": "pages/blog.svelte-854d3b74.js",
     "src": "src/routes/blog.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -279,7 +280,7 @@
     ]
   },
   "src/routes/chip8.svelte": {
-    "file": "pages/chip8.svelte-33dd80b9.js",
+    "file": "pages/chip8.svelte-51866e8e.js",
     "src": "src/routes/chip8.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -303,6 +304,21 @@
       "_paths-c8fbcc1d.js",
       "_Footer-8b9c5841.js",
       "_Title-6ea0487f.js"
+    ],
+    "css": [
+      "assets/blog-d3b97be1.css"
+    ]
+  },
+  "src/routes/formula1.svelte": {
+    "file": "pages/formula1.svelte-111ea2e3.js",
+    "src": "src/routes/formula1.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-cd4245c1.js",
+      "_Footer-8b9c5841.js",
+      "_Title-6ea0487f.js",
+      "_paths-c8fbcc1d.js"
     ],
     "css": [
       "assets/blog-d3b97be1.css"
@@ -352,7 +368,7 @@
     ]
   },
   "src/routes/upptime.svelte": {
-    "file": "pages/upptime.svelte-02c59320.js",
+    "file": "pages/upptime.svelte-583e683b.js",
     "src": "src/routes/upptime.svelte",
     "isEntry": true,
     "isDynamicEntry": true,

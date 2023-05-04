@@ -5,14 +5,14 @@
 		<link rel="icon" href="/dionpinto/logo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/dionpinto/_app/assets/blind75-c119d8d9.css">
+	<link rel="stylesheet" href="/dionpinto/_app/assets/blog-d3b97be1.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Footer-aa9882a5.css">
 	<link rel="stylesheet" href="/dionpinto/_app/assets/Title-03fd6c30.css">
 	<link rel="modulepreload" href="/dionpinto/_app/start-007e6693.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/index-cd4245c1.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/paths-c8fbcc1d.js">
 	<link rel="modulepreload" href="/dionpinto/_app/layout.svelte-632e8ee6.js">
-	<link rel="modulepreload" href="/dionpinto/_app/pages/blind75/minInRotatedSortedArray.svelte-08892b60.js">
+	<link rel="modulepreload" href="/dionpinto/_app/pages/formula1.svelte-111ea2e3.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Footer-8b9c5841.js">
 	<link rel="modulepreload" href="/dionpinto/_app/chunks/Title-6ea0487f.js">
 		<!-- latest -->
@@ -38,8 +38,8 @@
 
 
 <head><meta name="author" content="Dion Pinto">
-	<meta name="description" content="Leetcode Blind 75 153. Find Minimum in Rotated Sorted Array">
-	<title>153. Find Minimum in Rotated Sorted Array</title></head>
+	<meta name="description" content="Formula 1 grand prix visualisation">
+	<title>Formula 1 grand prix visualisation</title></head>
 
 <ul class="_toastContainer svelte-yh90az">
 </ul>
@@ -49,53 +49,40 @@
 			<a href="/dionpinto/blog" class="nes-badge"><span class="is-primary">Blog</span></a></div></nav>
 </main></header>
 
-	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">153. Find Minimum in Rotated Sorted Array</span></h2>
+	<main class="container"><div id="title"><main><h2 style="color: white;"><span class="title-word title-word-1 svelte-bnw4n7">Formula 1 grand prix visualisation</span></h2>
 </main>
-			<h4>Leetcode Blind 75</h4>
-			<h5 style="font-style: italic;">14th July 2022 ~ Dion Pinto</h5></div>
-		<div id="index" class="nes-container is-rounded is-dark"><div><a href="#description">Description</a></div>
-			<div><a href="#code">Code</a></div></div>
+			<h4>Formula 1 grand prix visualisation</h4>
+			<h5 style="font-style: italic;">4th May 2023 ~ Dion Pinto</h5></div>
+		<div id="index" class="nes-container is-rounded is-dark"><div><a href="#introduction">Introduction</a></div>
+			<div><a href="#demo">Demo</a></div></div>
 
-		<section id="description"><main><h4 style="color: #209cee;"><span>Description</span></h4>
-</main>
-
-			<p>Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For
-				example, the array nums = [0,1,2,4,5,6,7] might become: [4,5,6,7,0,1,2] if it was rotated 4
-				times. [0,1,2,4,5,6,7] if it was rotated 7 times. Notice that rotating an array [a[0], a[1],
-				a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].
-				Given the sorted rotated array nums of unique elements, return the minimum element of this
-				array. You must write an algorithm that runs in O(log n) time.
-
-				<a id="link" href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">(Problem)</a></p></section>
-
-		<section id="code"><main><h4 style="color: #209cee;"><span>Code (Python)</span></h4>
+		<section id="introduction"><main><h4 style="color: #209cee;"><span>Introduction</span></h4>
 </main>
 
-			<pre id="block"><code>
-				
-    class Solution:
-        def findMin(self, nums: List[int]) -&gt; int:
-            res=nums[0]
-            l,r=0,len(nums)-1
-            
-            while(l&lt;=r):
-                if(nums[l]&lt;=nums[r]): 
-                    res= min(res,nums[l])
-                
-                mid= (l+r)//2
-                res=min(nums[mid],res)
-                
-                if(nums[mid]&gt;=nums[l]):
-                    l=mid+1
-                else:
-                    r=mid-1
-            
-            return res
-							
-			</code></pre>
-			<p>Time Complexity =&gt; o(log n)</p>
-			<p>Space Complexity =&gt; o(1)</p></section>
-		<a type="button" class="nes-btn is-primary" href="/dionpinto/blind75">Back</a></main>
+			<p>The visualisation shown is a dynamic/interactive chart representing the current state of a
+				formula 1 grand prix (A demonstration of the Monaco grand prix is shown).
+			</p>
+			<p>➔ The outer ring indicates the time gap from the current race leader (In this case Lewis
+				Hamilton) with the color indicating the team.
+			</p>
+			<p>➔ The inner map is the circuit at which the current grand prix is conducted. Each driver is
+				represented as a colored plot, with the color indicating the team they race for.
+			</p>
+			<p>➔ The key at the right side of the chart indicates the driver&#39;s race abbreviations and their
+				current race position. The key at the bottom is the F1 race teams.
+			</p>
+
+			<p>➔ The topmost part of the chart indicates the current race leader and the white line
+				represents the direction of flow for the time gap metric (clockwise) and the number in red
+				indicates the current race lap.
+			</p></section>
+
+		<section id="demo"><main><h4 style="color: #209cee;"><span>Demo</span></h4>
+</main>
+
+			<img id="image" src="formula1/formula1viz.png" alt="Formula 1 visualisation"></section>
+
+		<a id="back-btn" type="button" class="nes-btn is-primary" href="/dionpinto/blog">Back</a></main>
 
 	<footer><main><section id="footer" class="icon-list svelte-xw0615"><a id="github icon" href="https://github.com/dpirad007" target="_blank" class="svelte-xw0615"><i class="nes-icon github"></i></a>
 		<div class="svelte-xw0615"><i class="nes-icon gmail"></i></div>
@@ -103,10 +90,10 @@
 </main></footer></main>
 
 
-		<script type="module" data-hydrate="1m3nvy8">
+		<script type="module" data-hydrate="1a7tdzv">
 		import { start } from "/dionpinto/_app/start-007e6693.js";
 		start({
-			target: document.querySelector('[data-hydrate="1m3nvy8"]').parentNode,
+			target: document.querySelector('[data-hydrate="1a7tdzv"]').parentNode,
 			paths: {"base":"/dionpinto","assets":"/dionpinto"},
 			session: {},
 			route: true,
@@ -117,10 +104,10 @@
 				error: null,
 				nodes: [
 					import("/dionpinto/_app/layout.svelte-632e8ee6.js"),
-						import("/dionpinto/_app/pages/blind75/minInRotatedSortedArray.svelte-08892b60.js")
+						import("/dionpinto/_app/pages/formula1.svelte-111ea2e3.js")
 				],
 				params: {},
-				routeId: "blind75/minInRotatedSortedArray"
+				routeId: "formula1"
 			}
 		});
 	</script></div>
