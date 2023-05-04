@@ -53,8 +53,7 @@
 				You can find the my Upptime git repository here <a
 					id="link"
 					href="https://github.com/dpirad007/dionpinto-upptime"
-					target="_blank"
-					alt="Dion Pinto Git repo">(Repository)</a
+					target="_blank">(Repository)</a
 				>
 			</p>
 
@@ -62,8 +61,7 @@
 				You can also find my Upptime status page here <a
 					id="link"
 					href="https://dpirad007.github.io/dionpinto-upptime/"
-					target="_blank"
-					alt="Dion Pinto Git repo">(Status Page)</a
+					target="_blank">(Status Page)</a
 				>
 			</p>
 		</section>

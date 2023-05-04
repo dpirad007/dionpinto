@@ -54,8 +54,7 @@
 				Ofcourse me being a beginner I decided to follow this excellent book by <a
 					id="link"
 					href="https://github.com/aquova/chip8-book/releases"
-					target="_blank"
-					alt="Chip 8 book">(aquova)</a
+					target="_blank">(aquova)</a
 				>
 			</p>
 
@@ -63,8 +62,7 @@
 				You can find my git repository here <a
 					id="link"
 					href="https://github.com/dpirad007/Chip-8"
-					target="_blank"
-					alt="Dion Pinto Git repo">(Repository Link)</a
+					target="_blank">(Repository Link)</a
 				>
 				Its pretty similar to the one by aquova, with the addition of comments to understand certain
 				shift and bit manipulation operations.
@@ -78,8 +76,7 @@
 				Here are some games on the emulator. I downloaded the roms <a
 					id="link"
 					href="https://www.zophar.net/pdroms/chip8/chip-8-games-pack.html"
-					target="_blank"
-					alt="Chip 8 roms">(from here)</a
+					target="_blank">(from here)</a
 				>
 			</p>
 
