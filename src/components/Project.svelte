@@ -59,7 +59,7 @@
 		<p>{projectDescription}</p>
 
 		<div id="project_footer">
-			{#if typeBadge === 'Internship' || typeBadge === 'Publication'}
+			{#if (typeBadge === 'Internship' || typeBadge === 'Publication') && gitLink}
 				<a href={gitLink} target="_blank"
 					><img
 						style="background-color: white;"
@@ -67,7 +67,7 @@
 						alt="external site logo"
 					/></a
 				>
-			{:else}
+			{:else if gitLink}
 				<a href={gitLink} target="_blank"><i class="nes-icon github" /></a>
 			{/if}
 		</div>

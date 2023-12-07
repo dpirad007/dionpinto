@@ -38,15 +38,14 @@
 			projectName: 'Botonomics',
 			projectDescription: 'Build interactive Chatbots.',
 			imageSrc: 'botonomics.png',
-			gitLink:
-				'https://teedee.io/?utm_source=botonomics_site&utm_medium=website&utm_campaign=analytics',
+			gitLink: null,
 			typeBadge: 'Internship'
 		},
 		{
 			projectName: 'Balanced',
 			projectDescription: 'Manage your Mental Wellbeing.',
 			imageSrc: 'balanced.png',
-			gitLink: 'https://qtech-mhs-dev.web.app/',
+			gitLink: null,
 			typeBadge: 'Internship'
 		}
 	];
