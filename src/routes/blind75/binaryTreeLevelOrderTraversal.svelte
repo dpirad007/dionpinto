@@ -36,17 +36,19 @@
 			<Title type={5} title="Description" />
 
 			<p>
-				Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+				Given the root of a binary tree, return the level order traversal of its nodes' values.
+				(i.e., from left to right, level by level).
 
-				<a id="link" href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank"
-					>(Problem)</a
+				<a
+					id="link"
+					href="https://leetcode.com/problems/binary-tree-level-order-traversal/"
+					target="_blank">(Problem)</a
 				>
 			</p>
 		</section>
 
 		<section id="code">
 			<Title type={5} title="Code" />
-
 
 			<pre id="block"><code>
 				{`
@@ -83,11 +85,10 @@
             return sol
 				`}			
 			</code></pre>
-			
-            <p>Time Complexity => o(n)</p>
+
+			<p>Time Complexity => o(n)</p>
 			<p>Space Complexity => o(n) (height of tree)</p>
 		</section>
-
 
 		<a type="button" class="nes-btn is-primary" href={`${base}/blind75`}>Back</a>
 	</main>
@@ -96,3 +97,9 @@
 		<Footer />
 	</footer>
 </main>
+
+<style>
+	.container {
+		padding: 1rem 10rem 1rem 10rem;
+	}
+</style>

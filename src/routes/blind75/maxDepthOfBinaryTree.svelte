@@ -36,11 +36,14 @@
 			<Title type={5} title="Description" />
 
 			<p>
-				Given the root of a binary tree, return its maximum depth.
-                A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+				Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is
+				the number of nodes along the longest path from the root node down to the farthest leaf
+				node.
 
-				<a id="link" href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank"
-					>(Problem)</a
+				<a
+					id="link"
+					href="https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+					target="_blank">(Problem)</a
 				>
 			</p>
 		</section>
@@ -49,8 +52,8 @@
 			<Title type={5} title="Code" />
 
 			<p>
-				We can find the max subarray by 2 common methods DFS, BFS.
-                Following is the DFS (recursive) approach.
+				We can find the max subarray by 2 common methods DFS, BFS. Following is the DFS (recursive)
+				approach.
 			</p>
 			<pre id="block"><code>
 				{`
@@ -101,11 +104,10 @@
             return level
 				`}			
 			</code></pre>
-			
-            <p>Time Complexity => o(n)</p>
+
+			<p>Time Complexity => o(n)</p>
 			<p>Space Complexity => o(n) (height of tree, since tree is not balanced its o(n))</p>
 		</section>
-
 
 		<a type="button" class="nes-btn is-primary" href={`${base}/blind75`}>Back</a>
 	</main>
@@ -114,3 +116,9 @@
 		<Footer />
 	</footer>
 </main>
+
+<style>
+	.container {
+		padding: 1rem 10rem 1rem 10rem;
+	}
+</style>

@@ -72,3 +72,9 @@
 		<Footer />
 	</footer>
 </main>
+
+<style>
+	.container {
+		padding: 1rem 10rem 1rem 10rem;
+	}
+</style>

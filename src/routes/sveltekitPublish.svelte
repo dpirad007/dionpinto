@@ -54,8 +54,7 @@
 				You can find the git repository here <a
 					id="link"
 					href="https://github.com/dpirad007/dionpinto"
-					target="_blank"
-					alt="Dion Pinto Git repo">(Repository Link)</a
+					target="_blank">(Repository Link)</a
 				>
 			</p>
 		</section>
@@ -176,3 +175,9 @@
 		<Footer />
 	</footer>
 </main>
+
+<style>
+	.container {
+		padding: 1rem 10rem 1rem 10rem;
+	}
+</style>

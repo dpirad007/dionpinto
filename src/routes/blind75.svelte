@@ -133,7 +133,7 @@
 
 	.main {
 		height: 100vh;
-		padding: 1rem;
+		padding: 1rem 4rem 1rem 4rem;
 		display: grid;
 		grid-template-areas:
 			'head'

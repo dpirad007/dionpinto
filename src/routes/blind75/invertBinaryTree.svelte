@@ -47,7 +47,6 @@
 		<section id="code">
 			<Title type={5} title="Code" />
 
-
 			<pre id="block"><code>
 				{`
     # Definition for a binary tree node.
@@ -72,11 +71,10 @@
             return root
 				`}			
 			</code></pre>
-			
-            <p>Time Complexity => o(n)</p>
+
+			<p>Time Complexity => o(n)</p>
 			<p>Space Complexity => o(n) (height of tree)</p>
 		</section>
-
 
 		<a type="button" class="nes-btn is-primary" href={`${base}/blind75`}>Back</a>
 	</main>
@@ -85,3 +83,9 @@
 		<Footer />
 	</footer>
 </main>
+
+<style>
+	.container {
+		padding: 1rem 10rem 1rem 10rem;
+	}
+</style>
