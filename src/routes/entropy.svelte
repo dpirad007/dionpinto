@@ -255,4 +255,10 @@
 	.container {
 		padding: 1rem 10rem 1rem 10rem;
 	}
+
+	@media only screen and (max-width: 740px) {
+		.container {
+			padding: 0rem;
+		}
+	}
 </style>
